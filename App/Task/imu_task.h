@@ -1,3 +1,9 @@
+/*
+* Change Logs:
+* Date            Author          Notes
+* 2024-9-11      陈思翰ChenSihan     1.0.0version
+*
+*/
 #ifndef __IMU_TASK_H__
 #define __IMU_TASK_H__
 

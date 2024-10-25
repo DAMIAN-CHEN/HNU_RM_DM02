@@ -1,3 +1,9 @@
+/*
+* Change Logs:
+* Date            Author          Notes
+* 2024-9-11      ³ÂË¼º²ChenSihan     1.0.0version
+*
+*/
 #include "imu_task.h"
 
 #define DES_TEMP    40.0f
