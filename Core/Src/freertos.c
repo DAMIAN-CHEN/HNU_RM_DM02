@@ -51,6 +51,9 @@ osThreadId defaultTaskHandle;
 osThreadId Imu_TaskHandle;
 uint32_t Imu_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Imu_TaskControlBlock;
+osThreadId Boat_TaskHandle;
+uint32_t Boat_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Boat_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -59,6 +62,7 @@ osStaticThreadDef_t Imu_TaskControlBlock;
 
 void StartDefaultTask(void const * argument);
 void Imu_Task_Entry(void const * argument);
+void Boat_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -130,6 +134,10 @@ void MX_FREERTOS_Init(void) {
   osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
   Imu_TaskHandle = osThreadCreate(osThread(Imu_Task), NULL);
 
+  /* definition and creation of Boat_Task */
+  osThreadStaticDef(Boat_Task, Boat_Task_Entry, osPriorityNormal, 0, 1024, Boat_TaskBuffer, &Boat_TaskControlBlock);
+  Boat_TaskHandle = osThreadCreate(osThread(Boat_Task), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -172,6 +180,24 @@ __weak void Imu_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Imu_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Boat_Task_Entry */
+/**
+* @brief Function implementing the Boat_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Boat_Task_Entry */
+__weak void Boat_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Boat_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Boat_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

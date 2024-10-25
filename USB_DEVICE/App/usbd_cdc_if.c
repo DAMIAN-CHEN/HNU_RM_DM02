@@ -31,7 +31,8 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+/*存放从树莓派中接收的控制数据*/
+uint8_t Rpi_buffer[5];
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -266,6 +267,10 @@ static int8_t CDC_Receive_HS(uint8_t* Buf, uint32_t *Len)
   /* USER CODE BEGIN 11 */
   USBD_CDC_SetRxBuffer(&hUsbDeviceHS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceHS);
+
+    /*在该回调函数中接收上位机发送的数据*/
+    /*从树莓派接收的控制数据的buffer*/
+    memcpy(Rpi_buffer,Buf,5);
   return (USBD_OK);
   /* USER CODE END 11 */
 }
