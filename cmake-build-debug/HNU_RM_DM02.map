@@ -138,8 +138,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x26 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
- .debug_line    0x00000000       0x53 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
- .debug_str     0x00000000      0x1d5 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
+ .debug_line    0x00000000       0x4b CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
+ .debug_str     0x00000000      0x1c5 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/memorymap.c.obj
@@ -193,8 +193,8 @@ Discarded input sections
                 0x00000000       0xa8 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
  .debug_rnglists
                 0x00000000       0x79 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x00000000      0x416 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
- .debug_str     0x00000000      0x42c CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00000000      0x40e CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x00000000      0x41c CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
  .debug_frame   0x00000000      0x190 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/syscalls.c.obj
  .ARM.attributes
@@ -213,8 +213,8 @@ Discarded input sections
                 0x00000000       0x20 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
  .debug_rnglists
                 0x00000000       0x13 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x00000000      0x20e CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
- .debug_str     0x00000000      0x258 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x00000000      0x206 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x00000000      0x248 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
  .debug_frame   0x00000000       0x28 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/sysmem.c.obj
  .ARM.attributes
@@ -431,8 +431,8 @@ Discarded input sections
                 0x00000000       0xa0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .debug_rnglists
                 0x00000000       0x8b CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
- .debug_line    0x00000000     0x246d CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
- .debug_str     0x00000000      0x98e CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+ .debug_line    0x00000000     0x2455 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+ .debug_str     0x00000000      0x97e CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .debug_frame   0x00000000      0x1fc CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .ARM.attributes
@@ -466,8 +466,8 @@ Discarded input sections
                 0x00000000       0x60 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
  .debug_rnglists
                 0x00000000       0x47 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
- .debug_line    0x00000000      0xc0c CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
- .debug_str     0x00000000      0x82b CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
+ .debug_line    0x00000000      0xbf4 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
+ .debug_str     0x00000000      0x81b CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
  .debug_frame   0x00000000      0x104 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj
  .ARM.attributes
@@ -501,8 +501,8 @@ Discarded input sections
                 0x00000000       0x60 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
  .debug_rnglists
                 0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
- .debug_line    0x00000000      0x92a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
- .debug_str     0x00000000      0x551 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
+ .debug_line    0x00000000      0x912 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
+ .debug_str     0x00000000      0x541 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
  .debug_frame   0x00000000      0x100 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj
  .ARM.attributes
@@ -547,8 +547,8 @@ Discarded input sections
                 0x00000000       0x88 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
  .debug_rnglists
                 0x00000000       0x65 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
- .debug_line    0x00000000      0x91e CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
- .debug_str     0x00000000      0x6b3 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
+ .debug_line    0x00000000      0x8fe CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
+ .debug_str     0x00000000      0x6a3 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
  .debug_frame   0x00000000      0x148 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
  .ARM.attributes
@@ -624,8 +624,8 @@ Discarded input sections
                 0x00000000      0x108 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
  .debug_rnglists
                 0x00000000       0xc7 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
- .debug_line    0x00000000      0xc8a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
- .debug_str     0x00000000      0x9ca CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
+ .debug_line    0x00000000      0xc72 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
+ .debug_str     0x00000000      0x9ba CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
  .debug_frame   0x00000000      0x254 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -678,8 +678,8 @@ Discarded input sections
                 0x00000000       0x70 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
  .debug_rnglists
                 0x00000000       0x4f CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
- .debug_line    0x00000000      0x39a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
- .debug_str     0x00000000      0x3a3 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
+ .debug_line    0x00000000      0x382 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
+ .debug_str     0x00000000      0x393 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
  .debug_frame   0x00000000       0xc8 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj
  .ARM.attributes
@@ -857,8 +857,8 @@ Discarded input sections
                 0x00000000      0x2a0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
  .debug_rnglists
                 0x00000000      0x21f CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
- .debug_line    0x00000000     0x50e6 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
- .debug_str     0x00000000     0x11b2 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
+ .debug_line    0x00000000     0x50ce CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
+ .debug_str     0x00000000     0x11a2 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
  .debug_frame   0x00000000      0x988 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
  .ARM.attributes
@@ -886,8 +886,8 @@ Discarded input sections
                 0x00000000       0x48 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
  .debug_rnglists
                 0x00000000       0x31 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
- .debug_line    0x00000000      0x447 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
- .debug_str     0x00000000      0xb62 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
+ .debug_line    0x00000000      0x42f CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
+ .debug_str     0x00000000      0xb52 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
  .debug_frame   0x00000000       0x80 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
  .ARM.attributes
@@ -945,8 +945,8 @@ Discarded input sections
                 0x00000000       0xc0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
  .debug_rnglists
                 0x00000000       0x93 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
- .debug_line    0x00000000     0x14e0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
- .debug_str     0x00000000      0xa62 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
+ .debug_line    0x00000000     0x14c8 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
+ .debug_str     0x00000000      0xa52 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
  .debug_frame   0x00000000      0x260 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj
  .ARM.attributes
@@ -996,8 +996,8 @@ Discarded input sections
                 0x00000000       0xa0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
  .debug_rnglists
                 0x00000000       0x74 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
- .debug_line    0x00000000      0x4bf CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
- .debug_str     0x00000000      0x64a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
+ .debug_line    0x00000000      0x49f CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
+ .debug_str     0x00000000      0x63a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x128 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj
  .ARM.attributes
@@ -1259,8 +1259,8 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
  .debug_rnglists
                 0x00000000       0x20 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
- .debug_line    0x00000000      0x3d8 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
- .debug_str     0x00000000      0x8eb CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
+ .debug_line    0x00000000      0x3c0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
+ .debug_str     0x00000000      0x8db CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
  .debug_frame   0x00000000       0x64 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj
  .ARM.attributes
@@ -1669,8 +1669,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0x26 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
- .debug_line    0x00000000       0x71 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
- .debug_str     0x00000000      0x1e6 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+ .debug_line    0x00000000       0x69 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+ .debug_str     0x00000000      0x1d6 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
@@ -1711,8 +1711,8 @@ Discarded input sections
                 0x00000000       0x80 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .debug_rnglists
                 0x00000000       0x79 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
- .debug_line    0x00000000      0xa5d CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
- .debug_str     0x00000000      0x7df CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+ .debug_line    0x00000000      0xa45 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+ .debug_str     0x00000000      0x7cf CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .debug_frame   0x00000000      0x188 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .ARM.attributes
@@ -1850,8 +1850,8 @@ Discarded input sections
                 0x00000000       0xe0 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .debug_rnglists
                 0x00000000       0xc2 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
- .debug_line    0x00000000     0x1414 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
- .debug_str     0x00000000      0xa0d CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+ .debug_line    0x00000000     0x13fc CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+ .debug_str     0x00000000      0x9fd CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .comment       0x00000000       0x46 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .debug_frame   0x00000000      0x380 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .ARM.attributes
@@ -3759,70 +3759,70 @@ LOAD D:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib
  .debug_rnglists
                 0x0000122c       0xa4 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
-.debug_line     0x00000000    0x197da
- .debug_line    0x00000000      0x683 CMakeFiles/HNU_RM_DM02.elf.dir/App/Algorithm/MahonyAHRS.c.obj
- .debug_line    0x00000683      0x3c3 CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088Middleware.c.obj
- .debug_line    0x00000a46      0x577 CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088driver.c.obj
- .debug_line    0x00000fbd      0x674 CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj
- .debug_line    0x00001631      0x32f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/freertos.c.obj
- .debug_line    0x00001960      0x27d CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x00001bdd      0x4d7 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/main.c.obj
- .debug_line    0x000020b4      0x451 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/spi.c.obj
- .debug_line    0x00002505      0x207 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_msp.c.obj
- .debug_line    0x0000270c      0x337 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_timebase_tim.c.obj
- .debug_line    0x00002a43      0x2b9 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_it.c.obj
- .debug_line    0x00002cfc      0x4b3 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/system_stm32h7xx.c.obj
- .debug_line    0x000031af      0x40e CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x000035bd       0x7a CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
- .debug_line    0x00003637      0xa0d CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
- .debug_line    0x00004044      0x8c3 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
- .debug_line    0x00004907      0x76d CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
- .debug_line    0x00005074      0xacc CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
- .debug_line    0x00005b40     0x139c CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
- .debug_line    0x00006edc     0x1f1d CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
- .debug_line    0x00008df9     0x2797 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj
- .debug_line    0x0000b590     0x4b4a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
- .debug_line    0x000100da     0x1f29 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
- .debug_line    0x00012003     0x1558 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_line    0x0001355b      0x3cf CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x0001392a      0x69d CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x00013fc7      0x78d CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x00014754     0x1cca CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_line    0x0001641e     0x263e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x00018a5c      0xd7e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+.debug_line     0x00000000    0x194ca
+ .debug_line    0x00000000      0x67b CMakeFiles/HNU_RM_DM02.elf.dir/App/Algorithm/MahonyAHRS.c.obj
+ .debug_line    0x0000067b      0x3a3 CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088Middleware.c.obj
+ .debug_line    0x00000a1e      0x56f CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088driver.c.obj
+ .debug_line    0x00000f8d      0x63c CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj
+ .debug_line    0x000015c9      0x30f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/freertos.c.obj
+ .debug_line    0x000018d8      0x265 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00001b3d      0x4a7 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00001fe4      0x431 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/spi.c.obj
+ .debug_line    0x00002415      0x1ef CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+ .debug_line    0x00002604      0x31f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_timebase_tim.c.obj
+ .debug_line    0x00002923      0x2a1 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_it.c.obj
+ .debug_line    0x00002bc4      0x49b CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/system_stm32h7xx.c.obj
+ .debug_line    0x0000305f      0x3ee CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x0000344d       0x7a CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
+ .debug_line    0x000034c7      0x9ed CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+ .debug_line    0x00003eb4      0x8a3 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+ .debug_line    0x00004757      0x755 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+ .debug_line    0x00004eac      0xaac CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+ .debug_line    0x00005958     0x1384 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+ .debug_line    0x00006cdc     0x1f05 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+ .debug_line    0x00008be1     0x277f CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj
+ .debug_line    0x0000b360     0x4b32 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+ .debug_line    0x0000fe92     0x1f11 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+ .debug_line    0x00011da3     0x1538 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_line    0x000132db      0x3b7 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x00013692      0x685 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x00013d17      0x775 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x0001448c     0x1cb2 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_line    0x0001613e     0x2626 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x00018764      0xd66 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
-.debug_str      0x00000000     0x8920
- .debug_str     0x00000000     0x8920 CMakeFiles/HNU_RM_DM02.elf.dir/App/Algorithm/MahonyAHRS.c.obj
-                                0x2d6 (size before relaxing)
- .debug_str     0x00008920      0x9a5 CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088Middleware.c.obj
- .debug_str     0x00008920      0x58d CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088driver.c.obj
- .debug_str     0x00008920      0xa7d CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj
- .debug_str     0x00008920      0x6c7 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/freertos.c.obj
- .debug_str     0x00008920      0x4f8 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/gpio.c.obj
- .debug_str     0x00008920      0xc1e CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/main.c.obj
- .debug_str     0x00008920      0xe80 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/spi.c.obj
- .debug_str     0x00008920      0xc24 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_msp.c.obj
- .debug_str     0x00008920     0x13f1 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_timebase_tim.c.obj
- .debug_str     0x00008920      0x8ba CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_it.c.obj
- .debug_str     0x00008920      0x6d2 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/system_stm32h7xx.c.obj
- .debug_str     0x00008920      0xd2f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/tim.c.obj
- .debug_str     0x00008920       0x8f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
- .debug_str     0x00008920     0x15d1 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
- .debug_str     0x00008920     0x1076 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
- .debug_str     0x00008920      0x70b CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
- .debug_str     0x00008920      0x9e9 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
- .debug_str     0x00008920      0x9f0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
- .debug_str     0x00008920      0xf32 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
- .debug_str     0x00008920      0xe09 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj
- .debug_str     0x00008920     0x189e CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
- .debug_str     0x00008920     0x122a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
- .debug_str     0x00008920     0x119e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_str     0x00008920      0x335 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_str     0x00008920      0x4b1 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_str     0x00008920      0x54e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_str     0x00008920      0xd05 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_str     0x00008920     0x12db CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_str     0x00008920      0xbc1 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+.debug_str      0x00000000     0x8828
+ .debug_str     0x00000000     0x8828 CMakeFiles/HNU_RM_DM02.elf.dir/App/Algorithm/MahonyAHRS.c.obj
+                                0x2c6 (size before relaxing)
+ .debug_str     0x00008828      0x995 CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088Middleware.c.obj
+ .debug_str     0x00008828      0x57d CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088driver.c.obj
+ .debug_str     0x00008828      0xa6d CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj
+ .debug_str     0x00008828      0x6b7 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/freertos.c.obj
+ .debug_str     0x00008828      0x4e8 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/gpio.c.obj
+ .debug_str     0x00008828      0xc0e CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/main.c.obj
+ .debug_str     0x00008828      0xe70 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/spi.c.obj
+ .debug_str     0x00008828      0xc14 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+ .debug_str     0x00008828     0x13e1 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_hal_timebase_tim.c.obj
+ .debug_str     0x00008828      0x8aa CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/stm32h7xx_it.c.obj
+ .debug_str     0x00008828      0x6c2 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/system_stm32h7xx.c.obj
+ .debug_str     0x00008828      0xd1f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/tim.c.obj
+ .debug_str     0x00008828       0x7f CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
+ .debug_str     0x00008828     0x15c1 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+ .debug_str     0x00008828     0x1066 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+ .debug_str     0x00008828      0x6fb CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+ .debug_str     0x00008828      0x9d9 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+ .debug_str     0x00008828      0x9e0 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+ .debug_str     0x00008828      0xf22 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+ .debug_str     0x00008828      0xdf9 CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj
+ .debug_str     0x00008828     0x188e CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+ .debug_str     0x00008828     0x121a CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+ .debug_str     0x00008828     0x118e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_str     0x00008828      0x325 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_str     0x00008828      0x4a1 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_str     0x00008828      0x53e CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_str     0x00008828      0xcf5 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_str     0x00008828     0x12cb CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_str     0x00008828      0xbb1 CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 .comment        0x00000000       0x45
  .comment       0x00000000       0x45 CMakeFiles/HNU_RM_DM02.elf.dir/App/Algorithm/MahonyAHRS.c.obj
@@ -3897,9 +3897,9 @@ LOAD D:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib
  .debug_frame   0x00004168       0x34 D:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-__atexit.o)
 
 .debug_line_str
-                0x00000000      0x156
+                0x00000000      0x146
  .debug_line_str
-                0x00000000      0x156 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
-                                 0x73 (size before relaxing)
+                0x00000000      0x146 CMakeFiles/HNU_RM_DM02.elf.dir/Core/Startup/startup_stm32h723vgtx.s.obj
+                                 0x63 (size before relaxing)
  .debug_line_str
-                0x00000156       0xe3 D:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)
+                0x00000146       0xe3 D:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.3 rel1/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libg.a(libc_a-memcpy.o)

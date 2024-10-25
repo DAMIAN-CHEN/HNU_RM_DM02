@@ -190,47 +190,51 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Core/Inc"
+					"path" : "D:/GitHub/HNU_RM_DM02/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/CMSIS/Include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Algorithm"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/ST/ARM/DSP/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Task"
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Algorithm"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Bsp"
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Task"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Bsp"
 				}
 			],
 			"language" : "C",
@@ -280,16 +284,16 @@
 				114,
 				115,
 				116,
-				117,
 				119,
-				120,
-				139,
-				140,
+				121,
+				122,
+				141,
 				142,
-				143,
 				144,
 				145,
-				146
+				146,
+				147,
+				148
 			]
 		},
 		{
@@ -382,47 +386,51 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Core/Inc"
+					"path" : "D:/GitHub/HNU_RM_DM02/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Drivers/CMSIS/Include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Algorithm"
+					"path" : "D:/GitHub/HNU_RM_DM02/Middlewares/ST/ARM/DSP/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Task"
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Algorithm"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/CubeMX_project/HNU_RM_DM02/App/Bsp"
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Task"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "D:/GitHub/HNU_RM_DM02/App/Bsp"
 				}
 			],
 			"language" : "ASM",
@@ -457,7 +465,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/CubeMX_project/HNU_RM_DM02/cmake-build-debug/HNU_RM_DM02.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/GitHub/HNU_RM_DM02/cmake-build-debug/HNU_RM_DM02.map",
 				"role" : "flags"
 			},
 			{
@@ -482,7 +490,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "D:/CubeMX_project/HNU_RM_DM02/STM32H723VGTX_FLASH.ld",
+				"fragment" : "D:/GitHub/HNU_RM_DM02/STM32H723VGTX_FLASH.ld",
 				"role" : "flags"
 			}
 		],
@@ -537,16 +545,16 @@
 				114,
 				115,
 				116,
-				117,
 				119,
-				120,
-				139,
-				140,
+				121,
+				122,
+				141,
 				142,
-				143,
 				144,
 				145,
-				146
+				146,
+				147,
+				148
 			]
 		},
 		{
@@ -630,9 +638,8 @@
 				93,
 				94,
 				95,
-				118,
-				121,
-				122,
+				117,
+				120,
 				123,
 				124,
 				125,
@@ -649,7 +656,9 @@
 				136,
 				137,
 				138,
-				141
+				139,
+				140,
+				143
 			]
 		},
 		{
@@ -660,7 +669,8 @@
 				33,
 				58,
 				96,
-				147
+				118,
+				149
 			]
 		}
 	],
@@ -1287,6 +1297,16 @@
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Middlewares/ST/ARM/DSP/Inc/arm_math.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Middlewares/Third_Party/ARM/DSP/LICENSE.txt",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,

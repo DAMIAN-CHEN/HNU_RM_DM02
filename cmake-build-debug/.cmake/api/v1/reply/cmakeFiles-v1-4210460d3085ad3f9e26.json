@@ -129,8 +129,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/CubeMX_project/HNU_RM_DM02/cmake-build-debug",
-		"source" : "D:/CubeMX_project/HNU_RM_DM02"
+		"build" : "D:/GitHub/HNU_RM_DM02/cmake-build-debug",
+		"source" : "D:/GitHub/HNU_RM_DM02"
 	},
 	"version" : 
 	{

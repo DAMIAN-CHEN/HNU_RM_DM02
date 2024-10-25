@@ -1,4 +1,4 @@
-# Install script for directory: D:/CubeMX_project/HNU_RM_DM02
+# Install script for directory: D:/GitHub/HNU_RM_DM02
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/CubeMX_project/HNU_RM_DM02/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/GitHub/HNU_RM_DM02/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
