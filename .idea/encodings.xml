@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/App/Bsp/BMI088Middleware.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/App/Bsp/BMI088driver.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/App/Task/imu_task.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/Task/lcd_task.c" charset="GBK" />
   </component>
 </project>

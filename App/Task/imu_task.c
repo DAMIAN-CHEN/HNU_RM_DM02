@@ -134,8 +134,8 @@ void Imu_Task_Entry(void const * argument)
 			  rpy_buffer[23]=rpy_data>>16;
 			  rpy_buffer[24]=rpy_data>>24;
 			
-			//CDC_Transmit_HS(rpy_buffer, sizeof(rpy_buffer));
-			
+			CDC_Transmit_HS(rpy_buffer, sizeof(rpy_buffer));
+        led_blinky_a();
         osDelay(1);
     }
     /* USER CODE END ImuTask_Entry */
