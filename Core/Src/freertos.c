@@ -54,6 +54,12 @@ osStaticThreadDef_t Imu_TaskControlBlock;
 osThreadId Boat_TaskHandle;
 uint32_t Boat_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Boat_TaskControlBlock;
+osThreadId Trans_TaskHandle;
+uint32_t Trans_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Trans_TaskControlBlock;
+osThreadId Motor_TaskHandle;
+uint32_t Motor_TaskBuffer[ 2048 ];
+osStaticThreadDef_t Motor_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -63,6 +69,8 @@ osStaticThreadDef_t Boat_TaskControlBlock;
 void StartDefaultTask(void const * argument);
 void Imu_Task_Entry(void const * argument);
 void Boat_Task_Entry(void const * argument);
+void Trans_Task_Entry(void const * argument);
+void Motor_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -131,12 +139,20 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of Imu_Task */
-  osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
+  osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityAboveNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
   Imu_TaskHandle = osThreadCreate(osThread(Imu_Task), NULL);
 
   /* definition and creation of Boat_Task */
   osThreadStaticDef(Boat_Task, Boat_Task_Entry, osPriorityNormal, 0, 1024, Boat_TaskBuffer, &Boat_TaskControlBlock);
   Boat_TaskHandle = osThreadCreate(osThread(Boat_Task), NULL);
+
+  /* definition and creation of Trans_Task */
+  osThreadStaticDef(Trans_Task, Trans_Task_Entry, osPriorityNormal, 0, 1024, Trans_TaskBuffer, &Trans_TaskControlBlock);
+  Trans_TaskHandle = osThreadCreate(osThread(Trans_Task), NULL);
+
+  /* definition and creation of Motor_Task */
+  osThreadStaticDef(Motor_Task, Motor_Task_Entry, osPriorityNormal, 0, 2048, Motor_TaskBuffer, &Motor_TaskControlBlock);
+  Motor_TaskHandle = osThreadCreate(osThread(Motor_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -198,6 +214,42 @@ __weak void Boat_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Boat_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Trans_Task_Entry */
+/**
+* @brief Function implementing the Trans_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Trans_Task_Entry */
+__weak void Trans_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Trans_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Trans_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Motor_Task_Entry */
+/**
+* @brief Function implementing the Motor_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Motor_Task_Entry */
+__weak void Motor_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Motor_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Motor_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

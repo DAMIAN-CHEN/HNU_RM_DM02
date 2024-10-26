@@ -10,7 +10,6 @@
 extern uint8_t Rpi_buffer[5];
 static uint8_t Rpi_data[5];
 
-
  /* PWM输出通道 */
 static int ccr_num_pwm1=24000-1;
 static int ccr_num_pwm2=24000-1;
@@ -18,8 +17,8 @@ static int ccr_num_pwm3=24000-1;
 static int ccr_num_pwm4=24000-1;
 
  /* 电机输出量 */
-static float servo_number=0.075;
-static float motor_number=0.075;
+static float servo_number=0.075f;
+static float motor_number=0.075f;
 
 /*PWM波输出函数*/
 void BOAT_PWM_OUT(int pwm_channel,float pwm_period)
@@ -27,19 +26,19 @@ void BOAT_PWM_OUT(int pwm_channel,float pwm_period)
 	switch (pwm_channel)
 	{
 	   case 1:
-		 TIM1->CCR3 = (uint32_t)(ccr_num_pwm1*pwm_period);
+		 TIM1->CCR3 = (uint32_t)((float )ccr_num_pwm1*pwm_period);
 		break;
 
 		case 2:
-		 TIM1->CCR1 = (uint32_t)(ccr_num_pwm2*pwm_period);	
+		 TIM1->CCR1 = (uint32_t)((float )ccr_num_pwm2*pwm_period);
 		break;
 
 		case 3:
-		TIM2->CCR3 = (uint32_t)(ccr_num_pwm3*pwm_period);
+		TIM2->CCR3 = (uint32_t)((float )ccr_num_pwm3*pwm_period);
 		break;
 
 		case 4:
-		 TIM2->CCR1 = (uint32_t)(ccr_num_pwm4*pwm_period);
+		 TIM2->CCR1 = (uint32_t)((float )ccr_num_pwm4*pwm_period);
 		break;
 	
 	default:
@@ -75,8 +74,8 @@ void BOAT_PWM_OUT(int pwm_channel,float pwm_period)
 		左上限0.067
 		右上限0.081
 		*****************************/
-		if(servo_number<=0.065)servo_number=0.065;
-		if(servo_number>=0.085)servo_number=0.085;
+		if(servo_number<=0.065f)servo_number=0.065f;
+		if(servo_number>=0.085f)servo_number=0.085f;
 		BOAT_PWM_OUT(1,servo_number);//舵机
 		
 		/****************************
@@ -85,13 +84,10 @@ void BOAT_PWM_OUT(int pwm_channel,float pwm_period)
 		后上限0.070
 		前上限0.080
 		****************************/
-		if(motor_number<=0.065)motor_number=0.065;
-		if(motor_number>=0.085)motor_number=0.085;
+		if(motor_number<=0.065f)motor_number=0.065f;
+		if(motor_number>=0.085f)motor_number=0.085f;
 		BOAT_PWM_OUT(2,motor_number);//无刷电机
-		
-	/***********RGB流水灯**********/
-	led_blinky_boat(servo_number,motor_number);
- 
+
   osDelay(1);/*！线程切换边缘勿动*/	
   }
 	
