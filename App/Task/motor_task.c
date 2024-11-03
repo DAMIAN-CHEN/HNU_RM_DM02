@@ -9,11 +9,12 @@
 void Motor_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN Motor_Task_Entry */
-
+    can_bsp_init();
     /* Infinite loop */
     for(;;)
     {
-
+        CAN_cmd_chassis(6000,6000,6000,6000);
+        CAN_cmd_gimbal(6000,6000,6000,6000);
 
 
 

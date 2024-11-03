@@ -8,4 +8,5 @@
 #ifndef HNU_RM_DM02_MOTOR_TASK_H
 #define HNU_RM_DM02_MOTOR_TASK_H
 #include "cmsis_os.h"
+#include "bsp_can.h"
 #endif //HNU_RM_DM02_MOTOR_TASK_H
