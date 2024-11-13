@@ -9,4 +9,6 @@
 #define HNU_RM_DM02_MOTOR_TASK_H
 #include "cmsis_os.h"
 #include "bsp_can.h"
+#include "pid.h"
+
 #endif //HNU_RM_DM02_MOTOR_TASK_H

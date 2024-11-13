@@ -6,6 +6,11 @@
 */
 
 #include "motor_task.h"
+
+int16_t chassis_motor_current[4]={0};
+int16_t  gimbal_motor_current[4]={0};
+int16_t   shoot_motor_current[4]={0};
+
 void Motor_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN Motor_Task_Entry */
@@ -13,10 +18,8 @@ void Motor_Task_Entry(void const * argument)
     /* Infinite loop */
     for(;;)
     {
-        CAN_cmd_chassis(6000,6000,6000,6000);
-        CAN_cmd_gimbal(6000,6000,6000,6000);
-
-
+        CAN_cmd_chassis(chassis_motor_current[0],chassis_motor_current[1],chassis_motor_current[2],chassis_motor_current[3]);
+        CAN_cmd_gimbal(gimbal_motor_current[0],gimbal_motor_current[1],gimbal_motor_current[2],gimbal_motor_current[3]);
 
         osDelay(1);
     }

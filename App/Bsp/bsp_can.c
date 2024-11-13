@@ -16,7 +16,7 @@
 **/
 void can_bsp_init(void)
 {
-    can_filter_init();
+    can_filter_init();                                              //初始化FDCAN过滤器(经典CAN的过滤器配置)
     HAL_FDCAN_Start(&hfdcan1);                               //开启FDCAN
     HAL_FDCAN_Start(&hfdcan2);
     HAL_FDCAN_Start(&hfdcan3);
@@ -35,6 +35,8 @@ void can_filter_init(void) {
     fdcan_filter.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;           //过滤器0关联到FIFO0
     fdcan_filter.FilterID1 = 0x00000000;                           //设置过滤ID
     fdcan_filter.FilterID2 = 0x00000000;                           //设置过滤ID
+
+
     HAL_FDCAN_ConfigFilter(&hfdcan1,&fdcan_filter);
     HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE);
     HAL_FDCAN_ConfigFifoWatermark(&hfdcan1, FDCAN_CFG_RX_FIFO0, 1);
@@ -51,7 +53,7 @@ void can_filter_init(void) {
 }
 
 
-//motor data read
+/*DJI电机的结构体数据返回拼接函数，此处摘自例程代码，宏定义使用自行体会*/
 #define get_motor_measure(ptr, data)                                    \
     {                                                                   \
         (ptr)->last_ecd = (ptr)->ecd;                                   \
@@ -132,14 +134,14 @@ uint8_t fdcanx_send_data(FDCAN_HandleTypeDef *hfdcan, uint16_t id, uint8_t *data
     FDCAN_TxHeaderTypeDef TxHeader;
 
     TxHeader.Identifier = id;
-    TxHeader.IdType = FDCAN_STANDARD_ID;																// 标准ID
+    TxHeader.IdType = FDCAN_STANDARD_ID;														    // 标准ID
     TxHeader.TxFrameType = FDCAN_DATA_FRAME;														// 数据帧
-    TxHeader.DataLength = len << 16;																		// 发送数据长度
-    TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;										// 设置错误状态指示
+    TxHeader.DataLength = len ;																		// 发送数据长度
+    TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;										        // 设置错误状态指示
     TxHeader.BitRateSwitch = FDCAN_BRS_OFF;															// 不开启可变波特率
     TxHeader.FDFormat = FDCAN_CLASSIC_CAN;															// 普通CAN格式
-    TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;										// 用于发送事件FIFO控制, 不存储
-    TxHeader.MessageMarker = 0x00; 			// 用于复制到TX EVENT FIFO的消息Maker来识别消息状态，范围0到0xFF
+    TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;										        // 用于发送事件FIFO控制, 不存储
+    TxHeader.MessageMarker = 0x00; 			                                                        // 用于复制到TX EVENT FIFO的消息Maker来识别消息状态，范围0到0xFF
 
     if(HAL_FDCAN_AddMessageToTxFifoQ(hfdcan, &TxHeader, data)!=HAL_OK)
         return 1;//发送
@@ -269,23 +271,3 @@ uint8_t fdcanx_send_data(FDCAN_HandleTypeDef *hfdcan, uint16_t id, uint8_t *data
 
 
 
-
-
-
-
-/**
-************************************************************************
-* @brief:      	fdcanx_receive(FDCAN_HandleTypeDef *hfdcan, uint8_t *buf)
-* @param:       hfdcan：FDCAN句柄
-* @param:       buf：接收数据缓存
-* @retval:     	接收的数据长度
-* @details:    	接收数据
-************************************************************************
-**/
-uint8_t fdcanx_receive(FDCAN_HandleTypeDef *hfdcan, uint8_t *buf)
-{
-    FDCAN_RxHeaderTypeDef fdcan_RxHeader;
-    if(HAL_FDCAN_GetRxMessage(hfdcan,FDCAN_RX_FIFO0, &fdcan_RxHeader, buf)!=HAL_OK)
-        return 0;//接收数据
-    return fdcan_RxHeader.DataLength>>16;
-}

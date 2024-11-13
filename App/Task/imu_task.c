@@ -15,9 +15,11 @@
 
 #define DATA_LENS 24
 
+
 float gyro[3] = {0.0f};
 float acc[3] = {0.0f};
 static float temp = 0.0f;
+
 
 float imuQuat[4] = {0.0f};
 float imuAngle[3] = {0.0f};
@@ -29,13 +31,16 @@ void AHRS_init(float quat[4])
     quat[1] = 0.0f;
     quat[2] = 0.0f;
     quat[3] = 0.0f;
-
 }
+
+
 
 void AHRS_update(float quat[4], float gyro[3], float accel[3])
 {
     MahonyAHRSupdateIMU(quat, gyro[0], gyro[1], gyro[2], accel[0], accel[1], accel[2]);
 }
+
+
 
 void GetAngle(float q[4], float *yaw, float *pitch, float *roll)
 {
@@ -48,6 +53,8 @@ void GetAngle(float q[4], float *yaw, float *pitch, float *roll)
 static float err = 0;
 static float err_l = 0;
 static float err_ll = 0;
+
+/*控制BMI088加热电阻温度的pid 恒温30摄氏度*/
 static uint16_t IMU_Temp_Pid(float set,float measure,float Kp,float Ki,float Kd,float max_i_out,float max_out)
 {
     static float out = 0;
@@ -67,6 +74,8 @@ static uint16_t IMU_Temp_Pid(float set,float measure,float Kp,float Ki,float Kd,
     if (out < 0) out = 0.f;
     return (uint16_t)out;
 }
+
+
 /* USER CODE BEGIN Header_ImuTask_Entry */
 /**
 * @brief Function implementing the ImuTask thread.

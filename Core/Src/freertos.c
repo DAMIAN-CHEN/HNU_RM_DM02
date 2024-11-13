@@ -60,6 +60,21 @@ osStaticThreadDef_t Trans_TaskControlBlock;
 osThreadId Motor_TaskHandle;
 uint32_t Motor_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Motor_TaskControlBlock;
+osThreadId Chassis_TaskHandle;
+uint32_t Chassis_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Chassis_TaskControlBlock;
+osThreadId Gimbal_TaskHandle;
+uint32_t Gimbal_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Gimbal_TaskControlBlock;
+osThreadId Shoot_TaskHandle;
+uint32_t Shoot_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Shoot_TaskControlBlock;
+osThreadId Referee_TaskHandle;
+uint32_t Referee_TaskBuffer[ 2048 ];
+osStaticThreadDef_t Referee_TaskControlBlock;
+osThreadId Cmd_TaskHandle;
+uint32_t Cmd_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Cmd_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -71,6 +86,11 @@ void Imu_Task_Entry(void const * argument);
 void Boat_Task_Entry(void const * argument);
 void Trans_Task_Entry(void const * argument);
 void Motor_Task_Entry(void const * argument);
+void Chassis_Task_Entry(void const * argument);
+void Gimbal_Task_Entry(void const * argument);
+void Shoot_Task_Entry(void const * argument);
+void Referee_Task_Entry(void const * argument);
+void Cmd_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -153,6 +173,26 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of Motor_Task */
   osThreadStaticDef(Motor_Task, Motor_Task_Entry, osPriorityNormal, 0, 2048, Motor_TaskBuffer, &Motor_TaskControlBlock);
   Motor_TaskHandle = osThreadCreate(osThread(Motor_Task), NULL);
+
+  /* definition and creation of Chassis_Task */
+  osThreadStaticDef(Chassis_Task, Chassis_Task_Entry, osPriorityNormal, 0, 1024, Chassis_TaskBuffer, &Chassis_TaskControlBlock);
+  Chassis_TaskHandle = osThreadCreate(osThread(Chassis_Task), NULL);
+
+  /* definition and creation of Gimbal_Task */
+  osThreadStaticDef(Gimbal_Task, Gimbal_Task_Entry, osPriorityNormal, 0, 1024, Gimbal_TaskBuffer, &Gimbal_TaskControlBlock);
+  Gimbal_TaskHandle = osThreadCreate(osThread(Gimbal_Task), NULL);
+
+  /* definition and creation of Shoot_Task */
+  osThreadStaticDef(Shoot_Task, Shoot_Task_Entry, osPriorityNormal, 0, 1024, Shoot_TaskBuffer, &Shoot_TaskControlBlock);
+  Shoot_TaskHandle = osThreadCreate(osThread(Shoot_Task), NULL);
+
+  /* definition and creation of Referee_Task */
+  osThreadStaticDef(Referee_Task, Referee_Task_Entry, osPriorityNormal, 0, 2048, Referee_TaskBuffer, &Referee_TaskControlBlock);
+  Referee_TaskHandle = osThreadCreate(osThread(Referee_Task), NULL);
+
+  /* definition and creation of Cmd_Task */
+  osThreadStaticDef(Cmd_Task, Cmd_Task_Entry, osPriorityNormal, 0, 1024, Cmd_TaskBuffer, &Cmd_TaskControlBlock);
+  Cmd_TaskHandle = osThreadCreate(osThread(Cmd_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -250,6 +290,96 @@ __weak void Motor_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Motor_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Chassis_Task_Entry */
+/**
+* @brief Function implementing the Chassis_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Chassis_Task_Entry */
+__weak void Chassis_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Chassis_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Chassis_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Gimbal_Task_Entry */
+/**
+* @brief Function implementing the Gimbal_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Gimbal_Task_Entry */
+__weak void Gimbal_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Gimbal_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Gimbal_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Shoot_Task_Entry */
+/**
+* @brief Function implementing the Shoot_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Shoot_Task_Entry */
+__weak void Shoot_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Shoot_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Shoot_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Referee_Task_Entry */
+/**
+* @brief Function implementing the Referee_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Referee_Task_Entry */
+__weak void Referee_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Referee_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Referee_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Cmd_Task_Entry */
+/**
+* @brief Function implementing the Cmd_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Cmd_Task_Entry */
+__weak void Cmd_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Cmd_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Cmd_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/
