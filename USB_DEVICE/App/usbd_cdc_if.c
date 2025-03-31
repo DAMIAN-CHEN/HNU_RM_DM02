@@ -268,7 +268,7 @@ static int8_t CDC_Receive_HS(uint8_t* Buf, uint32_t *Len)
   USBD_CDC_SetRxBuffer(&hUsbDeviceHS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceHS);
 
-    /*在该回调函数中接收上位机发�?�的数据*/
+    /*在该回调函数中接收上位机发�?�的数据*/
     /*从树莓派接收的控制数据的buffer*/
     memcpy(Rpi_buffer,Buf,5);
   return (USBD_OK);

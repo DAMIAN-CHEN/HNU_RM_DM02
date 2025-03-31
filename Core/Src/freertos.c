@@ -51,9 +51,9 @@ osThreadId defaultTaskHandle;
 osThreadId Imu_TaskHandle;
 uint32_t Imu_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Imu_TaskControlBlock;
-osThreadId Boat_TaskHandle;
-uint32_t Boat_TaskBuffer[ 1024 ];
-osStaticThreadDef_t Boat_TaskControlBlock;
+osThreadId Pwm_Motor_TaskHandle;
+uint32_t Pwm_Motor_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Pwm_Motor_TaskControlBlock;
 osThreadId Trans_TaskHandle;
 uint32_t Trans_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Trans_TaskControlBlock;
@@ -63,18 +63,12 @@ osStaticThreadDef_t Motor_TaskControlBlock;
 osThreadId Chassis_TaskHandle;
 uint32_t Chassis_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Chassis_TaskControlBlock;
-osThreadId Gimbal_TaskHandle;
-uint32_t Gimbal_TaskBuffer[ 1024 ];
-osStaticThreadDef_t Gimbal_TaskControlBlock;
-osThreadId Shoot_TaskHandle;
-uint32_t Shoot_TaskBuffer[ 1024 ];
-osStaticThreadDef_t Shoot_TaskControlBlock;
-osThreadId Referee_TaskHandle;
-uint32_t Referee_TaskBuffer[ 2048 ];
-osStaticThreadDef_t Referee_TaskControlBlock;
 osThreadId Cmd_TaskHandle;
 uint32_t Cmd_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Cmd_TaskControlBlock;
+osThreadId Ibus_TaskHandle;
+uint32_t Ibus_TaskBuffer[ 512 ];
+osStaticThreadDef_t Ibus_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -83,14 +77,12 @@ osStaticThreadDef_t Cmd_TaskControlBlock;
 
 void StartDefaultTask(void const * argument);
 void Imu_Task_Entry(void const * argument);
-void Boat_Task_Entry(void const * argument);
+void Pwm_Motor_Task_Entry(void const * argument);
 void Trans_Task_Entry(void const * argument);
 void Motor_Task_Entry(void const * argument);
 void Chassis_Task_Entry(void const * argument);
-void Gimbal_Task_Entry(void const * argument);
-void Shoot_Task_Entry(void const * argument);
-void Referee_Task_Entry(void const * argument);
 void Cmd_Task_Entry(void const * argument);
+void Ibus_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -162,9 +154,9 @@ void MX_FREERTOS_Init(void) {
   osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityAboveNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
   Imu_TaskHandle = osThreadCreate(osThread(Imu_Task), NULL);
 
-  /* definition and creation of Boat_Task */
-  osThreadStaticDef(Boat_Task, Boat_Task_Entry, osPriorityNormal, 0, 1024, Boat_TaskBuffer, &Boat_TaskControlBlock);
-  Boat_TaskHandle = osThreadCreate(osThread(Boat_Task), NULL);
+  /* definition and creation of Pwm_Motor_Task */
+  osThreadStaticDef(Pwm_Motor_Task, Pwm_Motor_Task_Entry, osPriorityNormal, 0, 1024, Pwm_Motor_TaskBuffer, &Pwm_Motor_TaskControlBlock);
+  Pwm_Motor_TaskHandle = osThreadCreate(osThread(Pwm_Motor_Task), NULL);
 
   /* definition and creation of Trans_Task */
   osThreadStaticDef(Trans_Task, Trans_Task_Entry, osPriorityNormal, 0, 1024, Trans_TaskBuffer, &Trans_TaskControlBlock);
@@ -178,21 +170,13 @@ void MX_FREERTOS_Init(void) {
   osThreadStaticDef(Chassis_Task, Chassis_Task_Entry, osPriorityNormal, 0, 1024, Chassis_TaskBuffer, &Chassis_TaskControlBlock);
   Chassis_TaskHandle = osThreadCreate(osThread(Chassis_Task), NULL);
 
-  /* definition and creation of Gimbal_Task */
-  osThreadStaticDef(Gimbal_Task, Gimbal_Task_Entry, osPriorityNormal, 0, 1024, Gimbal_TaskBuffer, &Gimbal_TaskControlBlock);
-  Gimbal_TaskHandle = osThreadCreate(osThread(Gimbal_Task), NULL);
-
-  /* definition and creation of Shoot_Task */
-  osThreadStaticDef(Shoot_Task, Shoot_Task_Entry, osPriorityNormal, 0, 1024, Shoot_TaskBuffer, &Shoot_TaskControlBlock);
-  Shoot_TaskHandle = osThreadCreate(osThread(Shoot_Task), NULL);
-
-  /* definition and creation of Referee_Task */
-  osThreadStaticDef(Referee_Task, Referee_Task_Entry, osPriorityNormal, 0, 2048, Referee_TaskBuffer, &Referee_TaskControlBlock);
-  Referee_TaskHandle = osThreadCreate(osThread(Referee_Task), NULL);
-
   /* definition and creation of Cmd_Task */
   osThreadStaticDef(Cmd_Task, Cmd_Task_Entry, osPriorityNormal, 0, 1024, Cmd_TaskBuffer, &Cmd_TaskControlBlock);
   Cmd_TaskHandle = osThreadCreate(osThread(Cmd_Task), NULL);
+
+  /* definition and creation of Ibus_Task */
+  osThreadStaticDef(Ibus_Task, Ibus_Task_Entry, osPriorityNormal, 0, 512, Ibus_TaskBuffer, &Ibus_TaskControlBlock);
+  Ibus_TaskHandle = osThreadCreate(osThread(Ibus_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -238,22 +222,22 @@ __weak void Imu_Task_Entry(void const * argument)
   /* USER CODE END Imu_Task_Entry */
 }
 
-/* USER CODE BEGIN Header_Boat_Task_Entry */
+/* USER CODE BEGIN Header_Pwm_Motor_Task_Entry */
 /**
-* @brief Function implementing the Boat_Task thread.
+* @brief Function implementing the Pwm_Motor_Task thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Boat_Task_Entry */
-__weak void Boat_Task_Entry(void const * argument)
+/* USER CODE END Header_Pwm_Motor_Task_Entry */
+__weak void Pwm_Motor_Task_Entry(void const * argument)
 {
-  /* USER CODE BEGIN Boat_Task_Entry */
+  /* USER CODE BEGIN Pwm_Motor_Task_Entry */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Boat_Task_Entry */
+  /* USER CODE END Pwm_Motor_Task_Entry */
 }
 
 /* USER CODE BEGIN Header_Trans_Task_Entry */
@@ -310,60 +294,6 @@ __weak void Chassis_Task_Entry(void const * argument)
   /* USER CODE END Chassis_Task_Entry */
 }
 
-/* USER CODE BEGIN Header_Gimbal_Task_Entry */
-/**
-* @brief Function implementing the Gimbal_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Gimbal_Task_Entry */
-__weak void Gimbal_Task_Entry(void const * argument)
-{
-  /* USER CODE BEGIN Gimbal_Task_Entry */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Gimbal_Task_Entry */
-}
-
-/* USER CODE BEGIN Header_Shoot_Task_Entry */
-/**
-* @brief Function implementing the Shoot_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Shoot_Task_Entry */
-__weak void Shoot_Task_Entry(void const * argument)
-{
-  /* USER CODE BEGIN Shoot_Task_Entry */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Shoot_Task_Entry */
-}
-
-/* USER CODE BEGIN Header_Referee_Task_Entry */
-/**
-* @brief Function implementing the Referee_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Referee_Task_Entry */
-__weak void Referee_Task_Entry(void const * argument)
-{
-  /* USER CODE BEGIN Referee_Task_Entry */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Referee_Task_Entry */
-}
-
 /* USER CODE BEGIN Header_Cmd_Task_Entry */
 /**
 * @brief Function implementing the Cmd_Task thread.
@@ -380,6 +310,24 @@ __weak void Cmd_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Cmd_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Ibus_Task_Entry */
+/**
+* @brief Function implementing the Ibus_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Ibus_Task_Entry */
+__weak void Ibus_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Ibus_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Ibus_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

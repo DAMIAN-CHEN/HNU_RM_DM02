@@ -7,10 +7,10 @@
 #include "trans_task.h"
 
 
-extern float gyro[3];
-extern float acc[3];
-extern float imuQuat[4];
-extern float imuAngle[3];
+static  float gyro[3];
+static  float acc[3];
+static  float imuQuat[4];
+static  float imuAngle[3];
 
 static int32_t rpy_data;
 static uint8_t rpy_buffer[25];
