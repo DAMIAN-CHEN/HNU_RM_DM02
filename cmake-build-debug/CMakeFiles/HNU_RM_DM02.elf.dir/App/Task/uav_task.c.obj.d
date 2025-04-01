@@ -101,4 +101,8 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/uav_task.c.obj: \
  D:\Github\HNU_RM_DM02\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h \
  D:\Github\HNU_RM_DM02\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ctlreq.h \
  D:\Github\HNU_RM_DM02\App\Algorithm\pid/pid.h \
- D:\Github\HNU_RM_DM02\App\Algorithm\dwt/drv_dwt.h
+ D:\Github\HNU_RM_DM02\App\Algorithm\dwt/drv_dwt.h \
+ D:\Github\HNU_RM_DM02\App\Task\ibus_task.h \
+ D:\Github\HNU_RM_DM02\App\Bsp/drv_ibus.h \
+ D:\Github\HNU_RM_DM02\Core\Inc/usart.h \
+ D:\Github\HNU_RM_DM02\App\Task\cmd_task.h

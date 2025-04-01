@@ -69,6 +69,21 @@ void Pwm_Motor_Out(int pwm_channel,float pwm_period)
 
 
 
+
+
+
+
+
+  	if (uav_now_status.lock_status==UAV_LOCK)
+  	{
+  		Pwm_Motor_Out(1,MOTOR_STOP_VAL);//无刷电机
+  		Pwm_Motor_Out(2,MOTOR_STOP_VAL);//无刷电机
+  		Pwm_Motor_Out(3,MOTOR_STOP_VAL);//无刷电机
+  		Pwm_Motor_Out(4,MOTOR_STOP_VAL);//无刷电机
+  	}
+
+
+
   	end = dwt_get_time_ms()-start;
   	pwm_motor_task_period_us=end;
 

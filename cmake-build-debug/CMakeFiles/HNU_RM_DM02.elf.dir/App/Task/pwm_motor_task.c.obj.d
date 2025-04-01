@@ -96,4 +96,14 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/pwm_motor_task.c.obj: \
  D:\Github\HNU_RM_DM02\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_core.h \
  D:\Github\HNU_RM_DM02\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ioreq.h \
  D:\Github\HNU_RM_DM02\Middlewares\ST\STM32_USB_Device_Library\Core\Inc/usbd_ctlreq.h \
- D:\Github\HNU_RM_DM02\App\Algorithm\dwt/drv_dwt.h
+ D:\Github\HNU_RM_DM02\App\Algorithm\dwt/drv_dwt.h \
+ D:\Github\HNU_RM_DM02\App\Task\cmd_task.h \
+ D:\Github\HNU_RM_DM02\App\Task\imu_task.h \
+ D:\Github\HNU_RM_DM02\App\Bsp/bmi088driver.h \
+ D:\Github\HNU_RM_DM02\App\Algorithm/MahonyAHRS.h \
+ D:\Github\HNU_RM_DM02\App\Bsp/ws2812.h \
+ D:\Github\HNU_RM_DM02\App\Task\uav_task.h \
+ D:\Github\HNU_RM_DM02\App\Algorithm\pid/pid.h \
+ D:\Github\HNU_RM_DM02\App\Task\ibus_task.h \
+ D:\Github\HNU_RM_DM02\App\Bsp/drv_ibus.h \
+ D:\Github\HNU_RM_DM02\Core\Inc/usart.h

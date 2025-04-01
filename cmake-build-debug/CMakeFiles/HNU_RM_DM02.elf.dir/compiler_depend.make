@@ -594,14 +594,17 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/cmd_task.c.obj: D:/Github/HNU_RM_DM02/Ap
   D:/Github/HNU_RM_DM02/App/Algorithm/dwt/drv_dwt.h \
   D:/Github/HNU_RM_DM02/App/Algorithm/pid/pid.h \
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
   D:/Github/HNU_RM_DM02/App/Task/cmd_task.h \
+  D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
   D:/Github/HNU_RM_DM02/Core/Inc/FreeRTOSConfig.h \
   D:/Github/HNU_RM_DM02/Core/Inc/main.h \
   D:/Github/HNU_RM_DM02/Core/Inc/stm32h7xx_hal_conf.h \
   D:/Github/HNU_RM_DM02/Core/Inc/tim.h \
+  D:/Github/HNU_RM_DM02/Core/Inc/usart.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
@@ -769,13 +772,16 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj: D:/Github/HNU_RM_DM02/Ap
   D:/Github/HNU_RM_DM02/App/Algorithm/dwt/drv_dwt.h \
   D:/Github/HNU_RM_DM02/App/Algorithm/pid/pid.h \
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
   D:/Github/HNU_RM_DM02/Core/Inc/FreeRTOSConfig.h \
   D:/Github/HNU_RM_DM02/Core/Inc/main.h \
   D:/Github/HNU_RM_DM02/Core/Inc/stm32h7xx_hal_conf.h \
   D:/Github/HNU_RM_DM02/Core/Inc/tim.h \
+  D:/Github/HNU_RM_DM02/Core/Inc/usart.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
@@ -945,12 +951,22 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/pwm_motor_task.c.obj: D:/Github/HNU_RM_D
   D:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdarg.h \
   D:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stddef.h \
   D:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdint.h \
+  D:/Github/HNU_RM_DM02/App/Algorithm/MahonyAHRS.h \
   D:/Github/HNU_RM_DM02/App/Algorithm/dwt/drv_dwt.h \
+  D:/Github/HNU_RM_DM02/App/Algorithm/pid/pid.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/cmd_task.h \
+  D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
+  D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/pwm_motor_task.h \
+  D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
   D:/Github/HNU_RM_DM02/Core/Inc/FreeRTOSConfig.h \
   D:/Github/HNU_RM_DM02/Core/Inc/main.h \
   D:/Github/HNU_RM_DM02/Core/Inc/stm32h7xx_hal_conf.h \
   D:/Github/HNU_RM_DM02/Core/Inc/tim.h \
+  D:/Github/HNU_RM_DM02/Core/Inc/usart.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
@@ -1042,7 +1058,9 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/trans_task.c.obj: D:/Github/HNU_RM_DM02/
   D:/Github/HNU_RM_DM02/App/Algorithm/dwt/drv_dwt.h \
   D:/Github/HNU_RM_DM02/App/Algorithm/pid/pid.h \
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/trans_task.h \
   D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
@@ -1050,6 +1068,7 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/trans_task.c.obj: D:/Github/HNU_RM_DM02/
   D:/Github/HNU_RM_DM02/Core/Inc/main.h \
   D:/Github/HNU_RM_DM02/Core/Inc/stm32h7xx_hal_conf.h \
   D:/Github/HNU_RM_DM02/Core/Inc/tim.h \
+  D:/Github/HNU_RM_DM02/Core/Inc/usart.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
@@ -1141,13 +1160,17 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/uav_task.c.obj: D:/Github/HNU_RM_DM02/Ap
   D:/Github/HNU_RM_DM02/App/Algorithm/dwt/drv_dwt.h \
   D:/Github/HNU_RM_DM02/App/Algorithm/pid/pid.h \
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
+  D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/cmd_task.h \
+  D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
   D:/Github/HNU_RM_DM02/Core/Inc/FreeRTOSConfig.h \
   D:/Github/HNU_RM_DM02/Core/Inc/main.h \
   D:/Github/HNU_RM_DM02/Core/Inc/stm32h7xx_hal_conf.h \
   D:/Github/HNU_RM_DM02/Core/Inc/tim.h \
+  D:/Github/HNU_RM_DM02/Core/Inc/usart.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
   D:/Github/HNU_RM_DM02/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \

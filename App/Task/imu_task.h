@@ -23,7 +23,6 @@
 #define INS_ROLL_ADDRESS_OFFSET   2
 
 
-extern osMessageQId imu_data_Queue;
 
 
 #endif

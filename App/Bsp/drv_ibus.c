@@ -10,7 +10,8 @@
 static uint8_t  rx_buffer[32] = {0};
 static uint16_t channel[IBUS_USER_CHANNELS] = {0};
 static uint16_t checksum_cal, checksum_ibus;
-fs_ia6b_ibus_t controler;
+
+fs_ia6b_ibus_t rc_data;
 
 static void ibus_unpack()
 {
@@ -50,6 +51,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
     // This callback is called when the full amount of data specified is received
     ibus_unpack();
-    memcpy(&controler,channel,sizeof(fs_ia6b_ibus_t));
+    memcpy(&rc_data,channel,sizeof(fs_ia6b_ibus_t));
     HAL_UART_Receive_DMA(&huart8, rx_buffer, sizeof(rx_buffer));  // Start the DMA transfer
 }

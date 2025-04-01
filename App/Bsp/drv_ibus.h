@@ -15,6 +15,15 @@
 #define IBUS_USER_CHANNELS		6			// Use 6 channels
 #define IBUS_MAX_CHANNLES		14
 
+#define IBUS_CH_MIN_VAL         1000
+#define IBUS_CH_MID_VAL         1500
+#define IBUS_CH_MAX_VAL         2000
+
+#define IBUS_SW_UP              1000
+#define IBUS_SW_MID             1500
+#define IBUS_SW_DN              2000
+
+
 void ibus_init(void);
 static void ibus_unpack(void);
 
@@ -23,8 +32,10 @@ typedef struct {
     uint16_t ch2;
     uint16_t ch3;
     uint16_t ch4;
-    uint16_t ch5;
-    uint16_t ch6;
+    uint16_t swB;
+    uint16_t swC;
 }__attribute__((packed)) fs_ia6b_ibus_t;
+
+extern fs_ia6b_ibus_t rc_data;
 
 #endif //DRV_IBUS_H

@@ -9,7 +9,7 @@
 #include "cmsis_os.h"
 #include "imu_task.h"
 #include "pid.h"
-
+#include "ibus_task.h"
 
 typedef struct
 {
@@ -47,7 +47,55 @@ typedef struct
     float accl_y;
     float accl_z;
 }imu_mail_data_t;
+
+/*-------------------------------------------------------------*/
+#define YAW_ANGLE_KP                     1
+#define YAW_ANGLE_KI                     0
+#define YAW_ANGLE_KD                     0
+#define YAW_ANGLE_MAXIOUT                0
+#define YAW_ANGLE_MAXOUT                 30
+#define YAW_ANGLE_DEADBAND               0
+
+#define YAW_ACCL_KP                      50
+#define YAW_ACCL_KI                      0
+#define YAW_ACCL_KD                      0
+#define YAW_ACCL_MAXIOUT                 0
+#define YAW_ACCL_MAXOUT                  5000
+#define YAW_ACCL_DEADBAND                1
+
+
+#define PITCH_ANGLE_KP                   1
+#define PITCH_ANGLE_KI                   0
+#define PITCH_ANGLE_KD                   0
+#define PITCH_ANGLE_MAXIOUT              0
+#define PITCH_ANGLE_MAXOUT               30
+#define PITCH_ANGLE_DEADBAND             0
+
+#define PITCH_ACCL_KP                    50
+#define PITCH_ACCL_KI                    0
+#define PITCH_ACCL_KD                    0
+#define PITCH_ACCL_MAXIOUT               0
+#define PITCH_ACCL_MAXOUT                5000
+#define PITCH_ACCL_DEADBAND              1
+
+
+#define ROLL_ANGLE_KP                    1
+#define ROLL_ANGLE_KI                    0
+#define ROLL_ANGLE_KD                    0
+#define ROLL_ANGLE_MAXIOUT               0
+#define ROLL_ANGLE_MAXOUT                30
+#define ROLL_ANGLE_DEADBAND              0.5
+
+#define ROLL_ACCL_KP                     50
+#define ROLL_ACCL_KI                     0
+#define ROLL_ACCL_KD                     0
+#define ROLL_ACCL_MAXIOUT                0
+#define ROLL_ACCL_MAXOUT                 5000
+#define ROLL_ACCL_DEADBAND               1
+
+/*-------------------------------------------------------------*/
 void UAV_Control_loop(void);
 
+extern imu_mail_data_t imu_mail_data;
 
 #endif //UAV_TASK_H

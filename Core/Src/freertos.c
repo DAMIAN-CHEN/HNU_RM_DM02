@@ -69,6 +69,9 @@ osStaticThreadDef_t Cmd_TaskControlBlock;
 osThreadId Ibus_TaskHandle;
 uint32_t Ibus_TaskBuffer[ 512 ];
 osStaticThreadDef_t Ibus_TaskControlBlock;
+osThreadId UAV_TaskHandle;
+uint32_t UAV_TaskBuffer[ 2048 ];
+osStaticThreadDef_t UAV_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -83,6 +86,7 @@ void Motor_Task_Entry(void const * argument);
 void Chassis_Task_Entry(void const * argument);
 void Cmd_Task_Entry(void const * argument);
 void Ibus_Task_Entry(void const * argument);
+void UAV_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -177,6 +181,10 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of Ibus_Task */
   osThreadStaticDef(Ibus_Task, Ibus_Task_Entry, osPriorityNormal, 0, 512, Ibus_TaskBuffer, &Ibus_TaskControlBlock);
   Ibus_TaskHandle = osThreadCreate(osThread(Ibus_Task), NULL);
+
+  /* definition and creation of UAV_Task */
+  osThreadStaticDef(UAV_Task, UAV_Task_Entry, osPriorityNormal, 0, 2048, UAV_TaskBuffer, &UAV_TaskControlBlock);
+  UAV_TaskHandle = osThreadCreate(osThread(UAV_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -328,6 +336,24 @@ __weak void Ibus_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Ibus_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_UAV_Task_Entry */
+/**
+* @brief Function implementing the UAV_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_UAV_Task_Entry */
+__weak void UAV_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN UAV_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END UAV_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

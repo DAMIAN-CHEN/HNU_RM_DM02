@@ -25,9 +25,8 @@ static float imuQuat[4] = {0.0f};
 static float imuAngle[3] = {0.0f};
 
 
-static imu_mail_data_t imu_data;
-osMessageQId imu_data_Queue;
 
+static uint64_t imu_task_period_us;
 
 void AHRS_init(float quat[4])
 {
@@ -90,6 +89,7 @@ static uint16_t IMU_Temp_Pid(float set,float measure,float Kp,float Ki,float Kd,
 void Imu_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN ImuTask_Entry */
+    uint64_t start,end;
 
     osDelay(10);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
@@ -102,6 +102,9 @@ void Imu_Task_Entry(void const * argument)
     /* Infinite loop */
     for(;;)
     {
+        start=dwt_get_time_us();
+
+
         BMI088_read(gyro, acc, &temp);
         
         AHRS_update(imuQuat, gyro, acc);
@@ -109,13 +112,16 @@ void Imu_Task_Entry(void const * argument)
 
         htim3.Instance->CCR4 = IMU_Temp_Pid(DES_TEMP,temp,KP,KI,KD,MAX_I_OUT,MAX_OUT);
 
-        imu_data.accl_x=acc[0];
-        imu_data.accl_y=acc[1];
-        imu_data.accl_z=acc[2];
+        imu_mail_data.accl_x=acc[0];
+        imu_mail_data.accl_y=acc[1];
+        imu_mail_data.accl_z=acc[2];
 
-        imu_data.roll=imuAngle[0];
-        imu_data.pitch=imuAngle[1];
-        imu_data.yaw=imuAngle[2];
+        imu_mail_data.yaw=imuAngle[0];
+        imu_mail_data.roll=imuAngle[1];
+        imu_mail_data.pitch=imuAngle[2];
+
+        end = dwt_get_time_us()-start;
+        imu_task_period_us=end;
 
         osDelay(1);
     }
