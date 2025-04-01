@@ -774,6 +774,7 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.obj: D:/Github/HNU_RM_DM02/Ap
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
   D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/cmd_task.h \
   D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/uav_task.h \
@@ -1060,6 +1061,7 @@ CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/trans_task.c.obj: D:/Github/HNU_RM_DM02/
   D:/Github/HNU_RM_DM02/App/Bsp/BMI088driver.h \
   D:/Github/HNU_RM_DM02/App/Bsp/drv_ibus.h \
   D:/Github/HNU_RM_DM02/App/Bsp/ws2812.h \
+  D:/Github/HNU_RM_DM02/App/Task/cmd_task.h \
   D:/Github/HNU_RM_DM02/App/Task/ibus_task.h \
   D:/Github/HNU_RM_DM02/App/Task/imu_task.h \
   D:/Github/HNU_RM_DM02/App/Task/trans_task.h \

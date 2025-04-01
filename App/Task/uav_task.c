@@ -4,7 +4,7 @@
 
 #include "uav_task.h"
 
-#include "cmd_task.h"
+
 
 imu_pid_t roll_acc_pid,roll_angle_pid;
 imu_pid_t pitch_acc_pid,pitch_angle_pid;
@@ -15,9 +15,10 @@ imu_ref_angle_t    imu_ref_angle;
 imu_out_rate_t     pid_out_rate;
 imu_mail_data_t    imu_mail_data;
 static imu_mail_data_t    imu_mail_data_rad;
-float motor_speed[4];
-static float throttle;
 
+float motor_speed[4];
+float motor_speed_pwm[4];
+static float throttle;
 
 void uav_pid_init(void)
 {
@@ -50,14 +51,14 @@ void UAV_Control_loop(void)
     /*富斯i6遥控器的中点值为1500，最低点1000，最高点2000*/
 if (uav_now_status.lock_status==UAV_UNLOCK)
     {
-    imu_ref_angle.yaw+=((float)rc_data.ch1-1500)*0.001f; //500*0.001推到底期望增加每次增加0.5（yaw轴要保持，因此是累加角度）
-    imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.02f; //500*0.02推到底期望增加最高增加到10
-    imu_ref_angle.roll=((float)rc_data.ch2-1500)*0.02f;  //500*0.02推到底期望增加最高增加到10
+        imu_ref_angle.yaw-=((float)rc_data.ch1-1500)*0.00005f; //500*0.001推到底期望增加每次增加0.025（yaw轴要保持，因此是累加角度）
+        imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.02f; //500*0.02推到底期望增加最高增加到10
+        imu_ref_angle.roll=-((float)rc_data.ch4-1500)*0.02f;  //500*0.02推到底期望增加最高增加到10
     }
 else {
-    imu_ref_angle.roll=0;
-    imu_ref_angle.pitch=0;
-    imu_ref_angle.yaw=0;
+        imu_ref_angle.roll=0;
+        imu_ref_angle.pitch=0;
+        imu_ref_angle.yaw=0;
 }
 
 
@@ -108,8 +109,8 @@ else {
 
 void UAV_Speed_Distribute(void)
 {
-    if (rc_data.ch3>=1500) {
-        throttle=((float)rc_data.ch3-1500)*10; //暂定最大油门开度5000
+    if (rc_data.ch3<=1500) {
+        throttle=(-((float)rc_data.ch3-1500))*10; //暂定最大油门开度5000
     }else {
         throttle=0;
     }
@@ -118,6 +119,12 @@ void UAV_Speed_Distribute(void)
     motor_speed[2]=throttle-pid_out_rate.roll-pid_out_rate.pitch-pid_out_rate.yaw;
     motor_speed[3]=throttle+pid_out_rate.roll-pid_out_rate.pitch+pid_out_rate.yaw;
 
+    for (int i = 0; i < 4; ++i)
+    {
+        if (motor_speed[i]>=8000)  motor_speed[i]=8000;
+        else if (motor_speed[i]<=0) motor_speed[i]=0;
+        motor_speed_pwm[i]=motor_speed[i]/8000*0.05f;
+    }
 }
 
 /**

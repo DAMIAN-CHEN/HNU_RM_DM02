@@ -50,7 +50,10 @@ void Pwm_Motor_Out(int pwm_channel,float pwm_period)
  /* 线程启动点*/
  void Pwm_Motor_Task_Entry(void const * argument)
 {
+
   /* USER CODE BEGIN BoatTask_Entry */
+	uav_now_status.lock_status=UAV_LOCK;
+
 	Pwm_Motor_Out(1,MOTOR_STOP_VAL);//无刷电机
 	Pwm_Motor_Out(2,MOTOR_STOP_VAL);//无刷电机
 	Pwm_Motor_Out(3,MOTOR_STOP_VAL);//无刷电机
@@ -67,27 +70,24 @@ void Pwm_Motor_Out(int pwm_channel,float pwm_period)
   	float start,end;
   	start=dwt_get_time_ms();
 
-
-
-
-
-
-
-
-  	if (uav_now_status.lock_status==UAV_LOCK)
+  	if (uav_now_status.lock_status==UAV_UNLOCK)
   	{
-  		Pwm_Motor_Out(1,MOTOR_STOP_VAL);//无刷电机
-  		Pwm_Motor_Out(2,MOTOR_STOP_VAL);//无刷电机
-  		Pwm_Motor_Out(3,MOTOR_STOP_VAL);//无刷电机
-  		Pwm_Motor_Out(4,MOTOR_STOP_VAL);//无刷电机
+  		Pwm_Motor_Out(1,MOTOR_MIN_VAL+motor_speed_pwm[0]);//无刷电机
+  		Pwm_Motor_Out(2,MOTOR_MIN_VAL+motor_speed_pwm[1]);//无刷电机
+  		Pwm_Motor_Out(3,MOTOR_MIN_VAL+motor_speed_pwm[2]);//无刷电机
+  		Pwm_Motor_Out(4,MOTOR_MIN_VAL+motor_speed_pwm[3]);//无刷电机
   	}
 
+  	if (uav_now_status.lock_status==UAV_LOCK) {
+	Pwm_Motor_Out(1,MOTOR_STOP_VAL);//无刷电机
+	Pwm_Motor_Out(2,MOTOR_STOP_VAL);//无刷电机
+	Pwm_Motor_Out(3,MOTOR_STOP_VAL);//无刷电机
+	Pwm_Motor_Out(4,MOTOR_STOP_VAL);//无刷电机
+}
 
 
   	end = dwt_get_time_ms()-start;
   	pwm_motor_task_period_us=end;
-
-
 
   osDelay(1);/*！线程切换边缘勿动*/	
   }

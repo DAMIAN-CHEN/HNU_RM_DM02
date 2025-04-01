@@ -7,7 +7,7 @@
 #include "string.h"
 #include "drv_dwt.h"
 #include "cmd_task.h"
-
+#include "uav_task.h"
 
 #define MOTOR_STOP_VAL   0.050f
 #define MOTOR_MIN_VAL    0.050f
