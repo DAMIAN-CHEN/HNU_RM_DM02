@@ -25,7 +25,7 @@
 
 
 void ibus_init(void);
-static void ibus_unpack(void);
+void ibus_unpack(void);
 
 typedef struct {
     uint16_t ch1;

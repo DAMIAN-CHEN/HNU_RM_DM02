@@ -7,4 +7,5 @@
 #include "usbd_cdc_if.h"
 #include "imu_task.h"
 #include "ws2812.h"
+#include "stdio.h"
 #endif //HNU_RM_DM02_TRANS_TASK_H

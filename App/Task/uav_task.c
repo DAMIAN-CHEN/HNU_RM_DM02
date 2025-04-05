@@ -19,8 +19,8 @@ static imu_mail_data_t    imu_mail_data_rad;
 float motor_speed[4];
 float motor_speed_pwm[4];
 static float throttle;
-
-void uav_pid_init(void)
+static float uav_task_period_us;
+static void uav_pid_init(void)
 {
     roll_acc_pid.pid_cfg=init_pid_cfg(ROLL_ACCL_KP, ROLL_ACCL_KI, ROLL_ACCL_KD, ROLL_ACCL_MAXIOUT,\
         ROLL_ACCL_MAXOUT,ROLL_ACCL_DEADBAND,PID_Trapezoid_Intergral | PID_Integral_Limit | PID_Derivative_On_Measurement);
@@ -51,14 +51,14 @@ void UAV_Control_loop(void)
     /*富斯i6遥控器的中点值为1500，最低点1000，最高点2000*/
 if (uav_now_status.lock_status==UAV_UNLOCK)
     {
-        imu_ref_angle.yaw-=((float)rc_data.ch1-1500)*0.00005f; //500*0.001推到底期望增加每次增加0.025（yaw轴要保持，因此是累加角度）
-        imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.02f; //500*0.02推到底期望增加最高增加到10
-        imu_ref_angle.roll=-((float)rc_data.ch4-1500)*0.02f;  //500*0.02推到底期望增加最高增加到10
+        imu_ref_angle.yaw-=((float)rc_data.ch4-1500)*0.0001f; //500*0.0001推到底期望增加每次增加0.0025（yaw轴要保持，因此是累加角度）
+        imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.06f; //500*0.06推到底期望增加最高增加到30
+        imu_ref_angle.roll=-((float)rc_data.ch1-1500)*0.06f;  //500*0.06推到底期望增加最高增加到30
     }
 else {
         imu_ref_angle.roll=0;
         imu_ref_angle.pitch=0;
-        imu_ref_angle.yaw=0;
+        imu_ref_angle.yaw=imu_mail_data_rad.yaw;
 }
 
 
@@ -82,6 +82,7 @@ else {
     imu_ref_acc.z=pid_calculate(yaw_angle_pid.pid_control,imu_mail_data_rad.yaw,imu_ref_angle.yaw);
     pid_out_rate.yaw=pid_calculate(yaw_acc_pid.pid_control,imu_mail_data_rad.accl_z,imu_ref_acc.z);
 
+    UAV_Speed_Distribute();
 }
 /*TODO：
  *
@@ -107,7 +108,7 @@ else {
 
                                                */
 
-void UAV_Speed_Distribute(void)
+static void UAV_Speed_Distribute(void)
 {
     if (rc_data.ch3<=1500) {
         throttle=(-((float)rc_data.ch3-1500))*10; //暂定最大油门开度5000
@@ -137,11 +138,16 @@ void UAV_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN Cmd_Task_Entry */
     uav_pid_init();
-
+    uint64_t start,end;
     /* Infinite loop */
     for(;;)
     {
+        start=dwt_get_time_us();
+
         UAV_Control_loop();
+
+        end = dwt_get_time_us()-start;
+        uav_task_period_us=end;
 
         osDelay(1);
     }

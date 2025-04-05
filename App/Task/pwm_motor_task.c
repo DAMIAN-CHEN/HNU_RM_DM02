@@ -10,12 +10,17 @@
 extern uint8_t Rpi_buffer[5];
 static uint8_t Rpi_data[5];
 
+
+//#define THROTTLE_SET
+
+
  /* PWM输出通道 */
 static int ccr_num_pwm1=24000-1;
 static int ccr_num_pwm2=24000-1;
 static int ccr_num_pwm3=24000-1;
 static int ccr_num_pwm4=24000-1;
 
+static float motor_pwm_period[4]={0};
  /* 电机输出量 */
 
 static float pwm_motor_task_period_us;
@@ -53,11 +58,26 @@ void Pwm_Motor_Out(int pwm_channel,float pwm_period)
 
   /* USER CODE BEGIN BoatTask_Entry */
 	uav_now_status.lock_status=UAV_LOCK;
+#ifdef THROTTLE_SET
+	Pwm_Motor_Out(1,MOTOR_MAX_VAL);//无刷电机
+	Pwm_Motor_Out(2,MOTOR_MAX_VAL);//无刷电机
+	Pwm_Motor_Out(3,MOTOR_MAX_VAL);//无刷电机
+	Pwm_Motor_Out(4,MOTOR_MAX_VAL);//无刷电机
+	osDelay(4000);
+		Pwm_Motor_Out(1,MOTOR1_MIN_VAL);//无刷电机
+		Pwm_Motor_Out(2,MOTOR2_MIN_VAL);//无刷电机
+		Pwm_Motor_Out(3,MOTOR3_MIN_VAL);//无刷电机
+		Pwm_Motor_Out(4,MOTOR4_MIN_VAL);//无刷电机
+
+
+#else
 
 	Pwm_Motor_Out(1,MOTOR_STOP_VAL);//无刷电机
 	Pwm_Motor_Out(2,MOTOR_STOP_VAL);//无刷电机
 	Pwm_Motor_Out(3,MOTOR_STOP_VAL);//无刷电机
 	Pwm_Motor_Out(4,MOTOR_STOP_VAL);//无刷电机
+
+#endif
 
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
@@ -72,10 +92,16 @@ void Pwm_Motor_Out(int pwm_channel,float pwm_period)
 
   	if (uav_now_status.lock_status==UAV_UNLOCK)
   	{
-  		Pwm_Motor_Out(1,MOTOR_MIN_VAL+motor_speed_pwm[0]);//无刷电机
-  		Pwm_Motor_Out(2,MOTOR_MIN_VAL+motor_speed_pwm[1]);//无刷电机
-  		Pwm_Motor_Out(3,MOTOR_MIN_VAL+motor_speed_pwm[2]);//无刷电机
-  		Pwm_Motor_Out(4,MOTOR_MIN_VAL+motor_speed_pwm[3]);//无刷电机
+  		motor_pwm_period[0]=MOTOR1_MIN_VAL+motor_speed_pwm[0];
+  		motor_pwm_period[1]=MOTOR2_MIN_VAL+motor_speed_pwm[1];
+  		motor_pwm_period[2]=MOTOR3_MIN_VAL+motor_speed_pwm[2];
+  		motor_pwm_period[3]=MOTOR4_MIN_VAL+motor_speed_pwm[3];
+
+  		Pwm_Motor_Out(1,motor_pwm_period[0]);//无刷电机
+  		Pwm_Motor_Out(2,motor_pwm_period[1]);//无刷电机
+  		Pwm_Motor_Out(3,motor_pwm_period[2]);//无刷电机
+  		Pwm_Motor_Out(4,motor_pwm_period[3]);//无刷电机
+
   	}
 
   	if (uav_now_status.lock_status==UAV_LOCK) {

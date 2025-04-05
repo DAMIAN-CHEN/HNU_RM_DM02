@@ -15,12 +15,12 @@
 void Ibus_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN Ibus_Task_Entry */
+    //osDelay(200);
     ibus_init();
     /* Infinite loop */
     for(;;)
     {
-
-
+        ibus_unpack();
         osDelay(1);
     }
     /* USER CODE END Ibus_Task_Entry */
