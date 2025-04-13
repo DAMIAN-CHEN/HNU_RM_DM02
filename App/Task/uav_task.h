@@ -58,12 +58,12 @@ typedef struct
 #define YAW_ANGLE_MAXOUT                 30
 #define YAW_ANGLE_DEADBAND               0.3f
 
-#define YAW_ACCL_KP                      140
+#define YAW_ACCL_KP                      20
 #define YAW_ACCL_KI                      0
 #define YAW_ACCL_KD                      0.01f
 #define YAW_ACCL_MAXIOUT                 0
-#define YAW_ACCL_MAXOUT                  8000
-#define YAW_ACCL_DEADBAND                0.5f
+#define YAW_ACCL_MAXOUT                  5000
+#define YAW_ACCL_DEADBAND                1
 
 
 #define PITCH_ANGLE_KP                   1
@@ -73,12 +73,12 @@ typedef struct
 #define PITCH_ANGLE_MAXOUT               30
 #define PITCH_ANGLE_DEADBAND             0
 
-#define PITCH_ACCL_KP                    140
+#define PITCH_ACCL_KP                    20
 #define PITCH_ACCL_KI                    0
 #define PITCH_ACCL_KD                    0.01f
 #define PITCH_ACCL_MAXIOUT               0
-#define PITCH_ACCL_MAXOUT                8000
-#define PITCH_ACCL_DEADBAND              0.5f
+#define PITCH_ACCL_MAXOUT                5000
+#define PITCH_ACCL_DEADBAND              1
 
 
 #define ROLL_ANGLE_KP                    1
@@ -88,16 +88,19 @@ typedef struct
 #define ROLL_ANGLE_MAXOUT                30
 #define ROLL_ANGLE_DEADBAND              0
 
-#define ROLL_ACCL_KP                     140
+#define ROLL_ACCL_KP                     20
 #define ROLL_ACCL_KI                     0
 #define ROLL_ACCL_KD                     0.01f
 #define ROLL_ACCL_MAXIOUT                0
-#define ROLL_ACCL_MAXOUT                 8000
-#define ROLL_ACCL_DEADBAND               0.5f
+#define ROLL_ACCL_MAXOUT                 5000
+#define ROLL_ACCL_DEADBAND               1
 
 /*-------------------------------------------------------------*/
 static void UAV_Control_loop(void);
 static void UAV_Speed_Distribute(void);
+static void UAV_Pid_Calculate(void);
+static void UAV_IMU_Conversion_of_Units(void);
+static void UAV_Cmd_Deal(void);
 extern imu_mail_data_t imu_mail_data;
 
 #endif //UAV_TASK_H

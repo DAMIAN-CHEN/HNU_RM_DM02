@@ -34,7 +34,16 @@ typedef struct {
     uint16_t ch4;
     uint16_t swB;
     uint16_t swC;
-}__attribute__((packed)) fs_ia6b_ibus_t;
+} fs_ia6b_ibus_t;
+
+/*typedef struct {
+    uint16_t ch1;
+    uint16_t ch2;
+    uint16_t ch3;
+    uint16_t ch4;
+    uint16_t swB;
+    uint16_t swC;
+}__attribute__((packed)) fs_ia6b_ibus_t;*/
 
 extern fs_ia6b_ibus_t rc_data;
 

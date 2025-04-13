@@ -48,41 +48,13 @@ static void uav_pid_init(void)
 }
 void UAV_Control_loop(void)
 {
-    /*富斯i6遥控器的中点值为1500，最低点1000，最高点2000*/
-if (uav_now_status.lock_status==UAV_UNLOCK)
-    {
-        imu_ref_angle.yaw-=((float)rc_data.ch4-1500)*0.0001f; //500*0.0001推到底期望增加每次增加0.0025（yaw轴要保持，因此是累加角度）
-        imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.06f; //500*0.06推到底期望增加最高增加到30
-        imu_ref_angle.roll=-((float)rc_data.ch1-1500)*0.06f;  //500*0.06推到底期望增加最高增加到30
-    }
-else {
-        imu_ref_angle.roll=0;
-        imu_ref_angle.pitch=0;
-        imu_ref_angle.yaw=imu_mail_data_rad.yaw;
-}
+    UAV_IMU_Conversion_of_Units();//IMU单位换算成角度
 
+    UAV_Cmd_Deal();//命令处理
 
+    UAV_Pid_Calculate();//串级PID计算
 
-    //单位:rad 度
-    imu_mail_data_rad.yaw=imu_mail_data.yaw*57.296f;
-    imu_mail_data_rad.pitch=imu_mail_data.pitch*57.296f;
-    imu_mail_data_rad.roll=imu_mail_data.roll*57.296f;
-    //单位:米每秒的平方 m/s^2
-    imu_mail_data_rad.accl_x=imu_mail_data.accl_x;
-    imu_mail_data_rad.accl_y=imu_mail_data.accl_y;
-    imu_mail_data_rad.accl_z=imu_mail_data.accl_z;
-
-
-    imu_ref_acc.x=pid_calculate(roll_angle_pid.pid_control,imu_mail_data_rad.roll,imu_ref_angle.roll);
-    pid_out_rate.roll=pid_calculate(roll_acc_pid.pid_control,imu_mail_data_rad.accl_x,imu_ref_acc.x);
-
-    imu_ref_acc.y=pid_calculate(pitch_angle_pid.pid_control,imu_mail_data_rad.pitch,imu_ref_angle.pitch);
-    pid_out_rate.pitch=pid_calculate(pitch_acc_pid.pid_control,imu_mail_data_rad.accl_y,imu_ref_acc.y);
-
-    imu_ref_acc.z=pid_calculate(yaw_angle_pid.pid_control,imu_mail_data_rad.yaw,imu_ref_angle.yaw);
-    pid_out_rate.yaw=pid_calculate(yaw_acc_pid.pid_control,imu_mail_data_rad.accl_z,imu_ref_acc.z);
-
-    UAV_Speed_Distribute();
+    UAV_Speed_Distribute();//动力分配
 }
 /*TODO：
  *
@@ -122,9 +94,48 @@ static void UAV_Speed_Distribute(void)
 
     for (int i = 0; i < 4; ++i)
     {
-        if (motor_speed[i]>=8000)  motor_speed[i]=8000;
+        if (motor_speed[i]>=5000)  motor_speed[i]=5000;
         else if (motor_speed[i]<=0) motor_speed[i]=0;
-        motor_speed_pwm[i]=motor_speed[i]/8000*0.05f;
+        motor_speed_pwm[i]=motor_speed[i]/5000*0.05f;
+    }
+}
+
+static void UAV_Pid_Calculate(void)
+{
+    imu_ref_acc.x=pid_calculate(roll_angle_pid.pid_control,imu_mail_data_rad.roll,imu_ref_angle.roll);
+    pid_out_rate.roll=pid_calculate(roll_acc_pid.pid_control,imu_mail_data_rad.accl_x,imu_ref_acc.x);
+
+    imu_ref_acc.y=pid_calculate(pitch_angle_pid.pid_control,imu_mail_data_rad.pitch,imu_ref_angle.pitch);
+    pid_out_rate.pitch=pid_calculate(pitch_acc_pid.pid_control,imu_mail_data_rad.accl_y,imu_ref_acc.y);
+
+    imu_ref_acc.z=pid_calculate(yaw_angle_pid.pid_control,imu_mail_data_rad.yaw,imu_ref_angle.yaw);
+    pid_out_rate.yaw=pid_calculate(yaw_acc_pid.pid_control,imu_mail_data_rad.accl_z,imu_ref_acc.z);
+}
+
+static void UAV_IMU_Conversion_of_Units(void)
+{
+    //单位:rad 度
+    imu_mail_data_rad.yaw=imu_mail_data.yaw*57.296f;
+    imu_mail_data_rad.pitch=imu_mail_data.pitch*57.296f;
+    imu_mail_data_rad.roll=imu_mail_data.roll*57.296f;
+    //单位:米每秒的平方 m/s^2
+    imu_mail_data_rad.accl_x=imu_mail_data.accl_x;
+    imu_mail_data_rad.accl_y=imu_mail_data.accl_y;
+    imu_mail_data_rad.accl_z=imu_mail_data.accl_z;
+}
+static void UAV_Cmd_Deal(void)
+{
+    /*富斯i6遥控器的中点值为1500，最低点1000，最高点2000*/
+    if (uav_now_status.lock_status==UAV_UNLOCK)
+    {
+        imu_ref_angle.yaw-=((float)rc_data.ch4-1500)*0.0001f; //500*0.0001推到底期望增加每次增加0.0025（yaw轴要保持，因此是累加角度）
+        imu_ref_angle.pitch=((float)rc_data.ch2-1500)*0.06f; //500*0.06推到底期望增加最高增加到30
+        imu_ref_angle.roll=-((float)rc_data.ch1-1500)*0.06f;  //500*0.06推到底期望增加最高增加到30
+    }
+    else {
+        imu_ref_angle.roll=0;
+        imu_ref_angle.pitch=0;
+        imu_ref_angle.yaw=imu_mail_data_rad.yaw;  //
     }
 }
 
