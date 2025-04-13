@@ -248,30 +248,6 @@ App/Bsp/BMI088driver.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/BMI088driver.c.s
 .PHONY : App/Bsp/BMI088driver.c.s
 
-App/Bsp/bsp_can.obj: App/Bsp/bsp_can.c.obj
-.PHONY : App/Bsp/bsp_can.obj
-
-# target to build an object file
-App/Bsp/bsp_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/bsp_can.c.obj
-.PHONY : App/Bsp/bsp_can.c.obj
-
-App/Bsp/bsp_can.i: App/Bsp/bsp_can.c.i
-.PHONY : App/Bsp/bsp_can.i
-
-# target to preprocess a source file
-App/Bsp/bsp_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/bsp_can.c.i
-.PHONY : App/Bsp/bsp_can.c.i
-
-App/Bsp/bsp_can.s: App/Bsp/bsp_can.c.s
-.PHONY : App/Bsp/bsp_can.s
-
-# target to generate assembly for a file
-App/Bsp/bsp_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/bsp_can.c.s
-.PHONY : App/Bsp/bsp_can.c.s
-
 App/Bsp/drv_ibus.obj: App/Bsp/drv_ibus.c.obj
 .PHONY : App/Bsp/drv_ibus.obj
 
@@ -319,30 +295,6 @@ App/Bsp/ws2812.s: App/Bsp/ws2812.c.s
 App/Bsp/ws2812.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Bsp/ws2812.c.s
 .PHONY : App/Bsp/ws2812.c.s
-
-App/Task/chassis_task.obj: App/Task/chassis_task.c.obj
-.PHONY : App/Task/chassis_task.obj
-
-# target to build an object file
-App/Task/chassis_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/chassis_task.c.obj
-.PHONY : App/Task/chassis_task.c.obj
-
-App/Task/chassis_task.i: App/Task/chassis_task.c.i
-.PHONY : App/Task/chassis_task.i
-
-# target to preprocess a source file
-App/Task/chassis_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/chassis_task.c.i
-.PHONY : App/Task/chassis_task.c.i
-
-App/Task/chassis_task.s: App/Task/chassis_task.c.s
-.PHONY : App/Task/chassis_task.s
-
-# target to generate assembly for a file
-App/Task/chassis_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/chassis_task.c.s
-.PHONY : App/Task/chassis_task.c.s
 
 App/Task/cmd_task.obj: App/Task/cmd_task.c.obj
 .PHONY : App/Task/cmd_task.obj
@@ -415,30 +367,6 @@ App/Task/imu_task.s: App/Task/imu_task.c.s
 App/Task/imu_task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/imu_task.c.s
 .PHONY : App/Task/imu_task.c.s
-
-App/Task/motor_task.obj: App/Task/motor_task.c.obj
-.PHONY : App/Task/motor_task.obj
-
-# target to build an object file
-App/Task/motor_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/motor_task.c.obj
-.PHONY : App/Task/motor_task.c.obj
-
-App/Task/motor_task.i: App/Task/motor_task.c.i
-.PHONY : App/Task/motor_task.i
-
-# target to preprocess a source file
-App/Task/motor_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/motor_task.c.i
-.PHONY : App/Task/motor_task.c.i
-
-App/Task/motor_task.s: App/Task/motor_task.c.s
-.PHONY : App/Task/motor_task.s
-
-# target to generate assembly for a file
-App/Task/motor_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/App/Task/motor_task.c.s
-.PHONY : App/Task/motor_task.c.s
 
 App/Task/pwm_motor_task.obj: App/Task/pwm_motor_task.c.obj
 .PHONY : App/Task/pwm_motor_task.obj
@@ -535,30 +463,6 @@ Core/Src/dma.s: Core/Src/dma.c.s
 Core/Src/dma.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/dma.c.s
 .PHONY : Core/Src/dma.c.s
-
-Core/Src/fdcan.obj: Core/Src/fdcan.c.obj
-.PHONY : Core/Src/fdcan.obj
-
-# target to build an object file
-Core/Src/fdcan.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/fdcan.c.obj
-.PHONY : Core/Src/fdcan.c.obj
-
-Core/Src/fdcan.i: Core/Src/fdcan.c.i
-.PHONY : Core/Src/fdcan.i
-
-# target to preprocess a source file
-Core/Src/fdcan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/fdcan.c.i
-.PHONY : Core/Src/fdcan.c.i
-
-Core/Src/fdcan.s: Core/Src/fdcan.c.s
-.PHONY : Core/Src/fdcan.s
-
-# target to generate assembly for a file
-Core/Src/fdcan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Core/Src/fdcan.c.s
-.PHONY : Core/Src/fdcan.c.s
 
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.obj
@@ -999,30 +903,6 @@ Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.s: Drivers/STM32H7xx_HAL_Dri
 Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.s
 .PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.s
-
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.obj: Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.obj
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.obj
-
-# target to build an object file
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.obj
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.obj
-
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.i: Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.i
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.i
-
-# target to preprocess a source file
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.i
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.i
-
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.s: Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.s
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.s
-
-# target to generate assembly for a file
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HNU_RM_DM02.elf.dir\build.make CMakeFiles/HNU_RM_DM02.elf.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.s
-.PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.s
 
 Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.obj: Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj
 .PHONY : Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.obj
@@ -1960,18 +1840,12 @@ help:
 	@echo ... App/Bsp/BMI088driver.obj
 	@echo ... App/Bsp/BMI088driver.i
 	@echo ... App/Bsp/BMI088driver.s
-	@echo ... App/Bsp/bsp_can.obj
-	@echo ... App/Bsp/bsp_can.i
-	@echo ... App/Bsp/bsp_can.s
 	@echo ... App/Bsp/drv_ibus.obj
 	@echo ... App/Bsp/drv_ibus.i
 	@echo ... App/Bsp/drv_ibus.s
 	@echo ... App/Bsp/ws2812.obj
 	@echo ... App/Bsp/ws2812.i
 	@echo ... App/Bsp/ws2812.s
-	@echo ... App/Task/chassis_task.obj
-	@echo ... App/Task/chassis_task.i
-	@echo ... App/Task/chassis_task.s
 	@echo ... App/Task/cmd_task.obj
 	@echo ... App/Task/cmd_task.i
 	@echo ... App/Task/cmd_task.s
@@ -1981,9 +1855,6 @@ help:
 	@echo ... App/Task/imu_task.obj
 	@echo ... App/Task/imu_task.i
 	@echo ... App/Task/imu_task.s
-	@echo ... App/Task/motor_task.obj
-	@echo ... App/Task/motor_task.i
-	@echo ... App/Task/motor_task.s
 	@echo ... App/Task/pwm_motor_task.obj
 	@echo ... App/Task/pwm_motor_task.i
 	@echo ... App/Task/pwm_motor_task.s
@@ -1996,9 +1867,6 @@ help:
 	@echo ... Core/Src/dma.obj
 	@echo ... Core/Src/dma.i
 	@echo ... Core/Src/dma.s
-	@echo ... Core/Src/fdcan.obj
-	@echo ... Core/Src/fdcan.i
-	@echo ... Core/Src/fdcan.s
 	@echo ... Core/Src/freertos.obj
 	@echo ... Core/Src/freertos.i
 	@echo ... Core/Src/freertos.s
@@ -2054,9 +1922,6 @@ help:
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.obj
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.i
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.s
-	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.obj
-	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.i
-	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.s
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.obj
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.i
 	@echo ... Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.s

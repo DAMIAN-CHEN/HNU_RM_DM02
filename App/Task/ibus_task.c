@@ -20,7 +20,7 @@ void Ibus_Task_Entry(void const * argument)
     /* Infinite loop */
     for(;;)
     {
-        ibus_unpack();
+        //ibus_unpack();
         osDelay(1);
     }
     /* USER CODE END Ibus_Task_Entry */

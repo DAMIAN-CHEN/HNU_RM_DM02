@@ -108,7 +108,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
 
     /* UART8 DMA Init */
     /* UART8_RX Init */
-    hdma_uart8_rx.Instance = DMA1_Stream0;
+    hdma_uart8_rx.Instance = DMA1_Stream2;
     hdma_uart8_rx.Init.Request = DMA_REQUEST_UART8_RX;
     hdma_uart8_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
     hdma_uart8_rx.Init.PeriphInc = DMA_PINC_DISABLE;

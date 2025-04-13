@@ -57,12 +57,6 @@ osStaticThreadDef_t Pwm_Motor_TaskControlBlock;
 osThreadId Trans_TaskHandle;
 uint32_t Trans_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Trans_TaskControlBlock;
-osThreadId Motor_TaskHandle;
-uint32_t Motor_TaskBuffer[ 2048 ];
-osStaticThreadDef_t Motor_TaskControlBlock;
-osThreadId Chassis_TaskHandle;
-uint32_t Chassis_TaskBuffer[ 1024 ];
-osStaticThreadDef_t Chassis_TaskControlBlock;
 osThreadId Cmd_TaskHandle;
 uint32_t Cmd_TaskBuffer[ 1024 ];
 osStaticThreadDef_t Cmd_TaskControlBlock;
@@ -82,8 +76,6 @@ void StartDefaultTask(void const * argument);
 void Imu_Task_Entry(void const * argument);
 void Pwm_Motor_Task_Entry(void const * argument);
 void Trans_Task_Entry(void const * argument);
-void Motor_Task_Entry(void const * argument);
-void Chassis_Task_Entry(void const * argument);
 void Cmd_Task_Entry(void const * argument);
 void Ibus_Task_Entry(void const * argument);
 void UAV_Task_Entry(void const * argument);
@@ -165,14 +157,6 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of Trans_Task */
   osThreadStaticDef(Trans_Task, Trans_Task_Entry, osPriorityNormal, 0, 1024, Trans_TaskBuffer, &Trans_TaskControlBlock);
   Trans_TaskHandle = osThreadCreate(osThread(Trans_Task), NULL);
-
-  /* definition and creation of Motor_Task */
-  osThreadStaticDef(Motor_Task, Motor_Task_Entry, osPriorityNormal, 0, 2048, Motor_TaskBuffer, &Motor_TaskControlBlock);
-  Motor_TaskHandle = osThreadCreate(osThread(Motor_Task), NULL);
-
-  /* definition and creation of Chassis_Task */
-  osThreadStaticDef(Chassis_Task, Chassis_Task_Entry, osPriorityNormal, 0, 1024, Chassis_TaskBuffer, &Chassis_TaskControlBlock);
-  Chassis_TaskHandle = osThreadCreate(osThread(Chassis_Task), NULL);
 
   /* definition and creation of Cmd_Task */
   osThreadStaticDef(Cmd_Task, Cmd_Task_Entry, osPriorityNormal, 0, 1024, Cmd_TaskBuffer, &Cmd_TaskControlBlock);
@@ -264,42 +248,6 @@ __weak void Trans_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Trans_Task_Entry */
-}
-
-/* USER CODE BEGIN Header_Motor_Task_Entry */
-/**
-* @brief Function implementing the Motor_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Motor_Task_Entry */
-__weak void Motor_Task_Entry(void const * argument)
-{
-  /* USER CODE BEGIN Motor_Task_Entry */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Motor_Task_Entry */
-}
-
-/* USER CODE BEGIN Header_Chassis_Task_Entry */
-/**
-* @brief Function implementing the Chassis_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Chassis_Task_Entry */
-__weak void Chassis_Task_Entry(void const * argument)
-{
-  /* USER CODE BEGIN Chassis_Task_Entry */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Chassis_Task_Entry */
 }
 
 /* USER CODE BEGIN Header_Cmd_Task_Entry */
