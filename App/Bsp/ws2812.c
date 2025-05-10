@@ -39,7 +39,7 @@ void WS2812_Ctrl(uint8_t r, uint8_t g, uint8_t b)
     }
 }
 
-void led_blinky_a()
+void led_blinky_rgb()
 {
 if(rgb_flag==RED_H)
 {
@@ -79,16 +79,3 @@ else if(rgb_flag==GREEN_L)
 }	
 }
 
-void led_blinky_boat(float servo_red,float motor_blue)
-{
-	red=10000*(servo_red-0.065);
-	blue=10000*(motor_blue-0.065);
-	
-	red=50+50*cos(6*time_scale);
-	blue=50+50*sin(2*time_scale);
-	green=50+50*sin(3*time_scale);
-	time_scale+=0.0015;
-	
-	WS2812_Ctrl(red , green , blue);
-	if(time_scale>=1000)time_scale=1;
-}

@@ -51,9 +51,21 @@ osThreadId defaultTaskHandle;
 osThreadId Imu_TaskHandle;
 uint32_t Imu_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Imu_TaskControlBlock;
-osThreadId Boat_TaskHandle;
-uint32_t Boat_TaskBuffer[ 1024 ];
-osStaticThreadDef_t Boat_TaskControlBlock;
+osThreadId Pwm_Motor_TaskHandle;
+uint32_t Pwm_Motor_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Pwm_Motor_TaskControlBlock;
+osThreadId Trans_TaskHandle;
+uint32_t Trans_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Trans_TaskControlBlock;
+osThreadId Cmd_TaskHandle;
+uint32_t Cmd_TaskBuffer[ 1024 ];
+osStaticThreadDef_t Cmd_TaskControlBlock;
+osThreadId Ibus_TaskHandle;
+uint32_t Ibus_TaskBuffer[ 512 ];
+osStaticThreadDef_t Ibus_TaskControlBlock;
+osThreadId UAV_TaskHandle;
+uint32_t UAV_TaskBuffer[ 2048 ];
+osStaticThreadDef_t UAV_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -62,7 +74,11 @@ osStaticThreadDef_t Boat_TaskControlBlock;
 
 void StartDefaultTask(void const * argument);
 void Imu_Task_Entry(void const * argument);
-void Boat_Task_Entry(void const * argument);
+void Pwm_Motor_Task_Entry(void const * argument);
+void Trans_Task_Entry(void const * argument);
+void Cmd_Task_Entry(void const * argument);
+void Ibus_Task_Entry(void const * argument);
+void UAV_Task_Entry(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -131,12 +147,28 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of Imu_Task */
-  osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
+  osThreadStaticDef(Imu_Task, Imu_Task_Entry, osPriorityAboveNormal, 0, 2048, Imu_TaskBuffer, &Imu_TaskControlBlock);
   Imu_TaskHandle = osThreadCreate(osThread(Imu_Task), NULL);
 
-  /* definition and creation of Boat_Task */
-  osThreadStaticDef(Boat_Task, Boat_Task_Entry, osPriorityNormal, 0, 1024, Boat_TaskBuffer, &Boat_TaskControlBlock);
-  Boat_TaskHandle = osThreadCreate(osThread(Boat_Task), NULL);
+  /* definition and creation of Pwm_Motor_Task */
+  osThreadStaticDef(Pwm_Motor_Task, Pwm_Motor_Task_Entry, osPriorityNormal, 0, 1024, Pwm_Motor_TaskBuffer, &Pwm_Motor_TaskControlBlock);
+  Pwm_Motor_TaskHandle = osThreadCreate(osThread(Pwm_Motor_Task), NULL);
+
+  /* definition and creation of Trans_Task */
+  osThreadStaticDef(Trans_Task, Trans_Task_Entry, osPriorityNormal, 0, 1024, Trans_TaskBuffer, &Trans_TaskControlBlock);
+  Trans_TaskHandle = osThreadCreate(osThread(Trans_Task), NULL);
+
+  /* definition and creation of Cmd_Task */
+  osThreadStaticDef(Cmd_Task, Cmd_Task_Entry, osPriorityNormal, 0, 1024, Cmd_TaskBuffer, &Cmd_TaskControlBlock);
+  Cmd_TaskHandle = osThreadCreate(osThread(Cmd_Task), NULL);
+
+  /* definition and creation of Ibus_Task */
+  osThreadStaticDef(Ibus_Task, Ibus_Task_Entry, osPriorityNormal, 0, 512, Ibus_TaskBuffer, &Ibus_TaskControlBlock);
+  Ibus_TaskHandle = osThreadCreate(osThread(Ibus_Task), NULL);
+
+  /* definition and creation of UAV_Task */
+  osThreadStaticDef(UAV_Task, UAV_Task_Entry, osPriorityNormal, 0, 2048, UAV_TaskBuffer, &UAV_TaskControlBlock);
+  UAV_TaskHandle = osThreadCreate(osThread(UAV_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -182,22 +214,94 @@ __weak void Imu_Task_Entry(void const * argument)
   /* USER CODE END Imu_Task_Entry */
 }
 
-/* USER CODE BEGIN Header_Boat_Task_Entry */
+/* USER CODE BEGIN Header_Pwm_Motor_Task_Entry */
 /**
-* @brief Function implementing the Boat_Task thread.
+* @brief Function implementing the Pwm_Motor_Task thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Boat_Task_Entry */
-__weak void Boat_Task_Entry(void const * argument)
+/* USER CODE END Header_Pwm_Motor_Task_Entry */
+__weak void Pwm_Motor_Task_Entry(void const * argument)
 {
-  /* USER CODE BEGIN Boat_Task_Entry */
+  /* USER CODE BEGIN Pwm_Motor_Task_Entry */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Boat_Task_Entry */
+  /* USER CODE END Pwm_Motor_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Trans_Task_Entry */
+/**
+* @brief Function implementing the Trans_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Trans_Task_Entry */
+__weak void Trans_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Trans_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Trans_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Cmd_Task_Entry */
+/**
+* @brief Function implementing the Cmd_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Cmd_Task_Entry */
+__weak void Cmd_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Cmd_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Cmd_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Ibus_Task_Entry */
+/**
+* @brief Function implementing the Ibus_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Ibus_Task_Entry */
+__weak void Ibus_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Ibus_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Ibus_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_UAV_Task_Entry */
+/**
+* @brief Function implementing the UAV_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_UAV_Task_Entry */
+__weak void UAV_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN UAV_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END UAV_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

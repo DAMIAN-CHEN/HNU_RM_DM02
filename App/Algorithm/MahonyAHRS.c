@@ -45,7 +45,7 @@ float invSqrt(float x);
 
 void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz) {
 	float recipNorm;
-    float q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3;  
+    float q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3;
 	float hx, hy, bx, bz;
 	float halfvx, halfvy, halfvz, halfwx, halfwy, halfwz;
 	float halfex, halfey, halfez;
@@ -64,13 +64,13 @@ void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float 
 		recipNorm = invSqrt(ax * ax + ay * ay + az * az);
 		ax *= recipNorm;
 		ay *= recipNorm;
-		az *= recipNorm;     
+		az *= recipNorm;
 
 		// Normalise magnetometer measurement
 		recipNorm = invSqrt(mx * mx + my * my + mz * mz);
 		mx *= recipNorm;
 		my *= recipNorm;
-		mz *= recipNorm;   
+		mz *= recipNorm;
 
         // Auxiliary variables to avoid repeated arithmetic
         q0q0 = q[0] * q[0];
@@ -82,7 +82,7 @@ void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float 
         q1q3 = q[1] * q[3];
         q2q2 = q[2] * q[2];
         q2q3 = q[2] * q[3];
-        q3q3 = q[3] * q[3];   
+        q3q3 = q[3] * q[3];
 
         // Reference direction of Earth's magnetic field
         hx = 2.0f * (mx * (0.5f - q2q2 - q3q3) + my * (q1q2 - q0q3) + mz * (q1q3 + q0q2));
@@ -96,8 +96,8 @@ void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float 
 		halfvz = q0q0 - 0.5f + q3q3;
         halfwx = bx * (0.5f - q2q2 - q3q3) + bz * (q1q3 - q0q2);
         halfwy = bx * (q1q2 - q0q3) + bz * (q0q1 + q2q3);
-        halfwz = bx * (q0q2 + q1q3) + bz * (0.5f - q1q1 - q2q2);  
-	
+        halfwz = bx * (q0q2 + q1q3) + bz * (0.5f - q1q1 - q2q2);
+
 		// Error is sum of cross product between estimated direction and measured direction of field vectors
 		halfex = (ay * halfvz - az * halfvy) + (my * halfwz - mz * halfwy);
 		halfey = (az * halfvx - ax * halfvz) + (mz * halfwx - mx * halfwz);
@@ -123,7 +123,7 @@ void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float 
 		gy += twoKp * halfey;
 		gz += twoKp * halfez;
 	}
-	
+
 	// Integrate rate of change of quaternion
 	gx *= (0.5f * (1.0f / sampleFreq));		// pre-multiply common factors
 	gy *= (0.5f * (1.0f / sampleFreq));
@@ -134,8 +134,8 @@ void MahonyAHRSupdate(float q[4], float gx, float gy, float gz, float ax, float 
 	q[0] += (-qb * gx - qc * gy - q[3] * gz);
 	q[1] += (qa * gx + qc * gz - q[3] * gy);
 	q[2] += (qa * gy - qb * gz + q[3] * gx);
-	q[3] += (qa * gz + qb * gy - qc * gx); 
-	
+	q[3] += (qa * gz + qb * gy - qc * gx);
+
 	// Normalise quaternion
 	recipNorm = invSqrt(q[0] * q[0] + q[1] * q[1] + q[2] * q[2] + q[3] * q[3]);
 	q[0] *= recipNorm;
@@ -160,13 +160,13 @@ void MahonyAHRSupdateIMU(float q[4], float gx, float gy, float gz, float ax, flo
 		recipNorm = invSqrt(ax * ax + ay * ay + az * az);
 		ax *= recipNorm;
 		ay *= recipNorm;
-		az *= recipNorm;        
+		az *= recipNorm;
 
 		// Estimated direction of gravity and vector perpendicular to magnetic flux
 		halfvx = q[1] * q[3] - q[0] * q[2];
 		halfvy = q[0] * q[1] + q[2] * q[3];
 		halfvz = q[0] * q[0] - 0.5f + q[3] * q[3];
-	
+
 		// Error is sum of cross product between estimated and measured direction of gravity
 		halfex = (ay * halfvz - az * halfvy);
 		halfey = (az * halfvx - ax * halfvz);
@@ -192,7 +192,7 @@ void MahonyAHRSupdateIMU(float q[4], float gx, float gy, float gz, float ax, flo
 		gy += twoKp * halfey;
 		gz += twoKp * halfez;
 	}
-	
+
 	// Integrate rate of change of quaternion
 	gx *= (0.5f * (1.0f / sampleFreq));		// pre-multiply common factors
 	gy *= (0.5f * (1.0f / sampleFreq));
@@ -203,8 +203,8 @@ void MahonyAHRSupdateIMU(float q[4], float gx, float gy, float gz, float ax, flo
 	q[0] += (-qb * gx - qc * gy - q[3] * gz);
 	q[1] += (qa * gx + qc * gz - q[3] * gy);
 	q[2] += (qa * gy - qb * gz + q[3] * gx);
-	q[3] += (qa * gz + qb * gy - qc * gx); 
-	
+	q[3] += (qa * gz + qb * gy - qc * gx);
+
 	// Normalise quaternion
 	recipNorm = invSqrt(q[0] * q[0] + q[1] * q[1] + q[2] * q[2] + q[3] * q[3]);
 	q[0] *= recipNorm;

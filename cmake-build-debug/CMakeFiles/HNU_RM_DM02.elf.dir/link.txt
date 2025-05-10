@@ -1,0 +1,1 @@
+C:\SysGCC\arm-eabi\bin\arm-none-eabi-gcc.exe -g -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-gc-sections,--print-memory-usage,-Map=D:/Github/HNU_RM_DM02/cmake-build-debug/HNU_RM_DM02.map -mcpu=cortex-m7 -mthumb -mthumb-interwork -T D:/Github/HNU_RM_DM02/STM32H723VGTX_FLASH.ld @CMakeFiles\HNU_RM_DM02.elf.dir\objects1.rsp -o HNU_RM_DM02.elf

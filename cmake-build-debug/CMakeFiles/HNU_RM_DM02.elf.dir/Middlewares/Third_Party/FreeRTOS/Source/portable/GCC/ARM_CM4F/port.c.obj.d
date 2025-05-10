@@ -1,0 +1,19 @@
+CMakeFiles/HNU_RM_DM02.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
+ C:/SysGCC/arm-eabi/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+ C:/SysGCC/arm-eabi/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/stdint.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/machine/_default_types.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/sys/features.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/_newlib_version.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/sys/_intsup.h \
+ C:/SysGCC/arm-eabi/arm-none-eabi/include/sys/_stdint.h \
+ D:\Github\HNU_RM_DM02\Core\Inc/FreeRTOSConfig.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/portable.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/deprecated_definitions.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F/portmacro.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
+ D:\Github\HNU_RM_DM02\Middlewares\Third_Party\FreeRTOS\Source\include/list.h
