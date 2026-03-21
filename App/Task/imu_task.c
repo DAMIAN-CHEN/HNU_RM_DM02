@@ -216,7 +216,6 @@ void Imu_Task_Entry(void const * argument)
         
         /* 通过统一协议帧发送 IMU 数据 */
         IMU_SendFrame();
-        led_blinky_a();
         osDelay(1);
     }
     /* USER CODE END ImuTask_Entry */

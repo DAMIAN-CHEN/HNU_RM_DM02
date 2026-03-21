@@ -1,7 +1,7 @@
 #include "ws2812.h"
 
-#define WS2812_LowLevel    0xC0     // 0��
-#define WS2812_HighLevel   0xF0     // 1��
+#define WS2812_LowLevel    0xC0     // 0
+#define WS2812_HighLevel   0xF0     // 1
 
  static uint8_t red=0;
  static uint8_t green=0;
@@ -37,58 +37,4 @@ void WS2812_Ctrl(uint8_t r, uint8_t g, uint8_t b)
     {
         HAL_SPI_Transmit(&WS2812_SPI_UNIT, &res, 1, 0xFFFF);
     }
-}
-
-void led_blinky_a()
-{
-if(rgb_flag==RED_H)
-{
-	WS2812_Ctrl(lighting, 0, 0);
-	lighting++;
-	if(lighting>=200)rgb_flag=RED_L;	
-}
-else if(rgb_flag==RED_L)
-{
-	WS2812_Ctrl(lighting,0, 0);
-	lighting--;
-	if(lighting<=3)rgb_flag=BLUE_H;
-}
-else if(rgb_flag==BLUE_H)
-{
-	WS2812_Ctrl(0, lighting, 0);
-	lighting++;
-	if(lighting>=200)rgb_flag=BLUE_L;
-}
-else if(rgb_flag==BLUE_L)
-{
-	WS2812_Ctrl(0, lighting, 0);
-	lighting--;
-	if(lighting<=3)rgb_flag=GREEN_H;
-}	
-else if(rgb_flag==GREEN_H)
-{
-	WS2812_Ctrl(0, 0, lighting);
-	lighting++;
-	if(lighting>=200)rgb_flag=GREEN_L;
-}	
-else if(rgb_flag==GREEN_L)
-{
-	WS2812_Ctrl(0, 0, lighting);
-	lighting--;
-	if(lighting<=3)rgb_flag=RED_H;
-}	
-}
-
-void led_blinky_boat(float servo_red,float motor_blue)
-{
-	red=10000*(servo_red-0.065);
-	blue=10000*(motor_blue-0.065);
-	
-	red=50+50*cos(6*time_scale);
-	blue=50+50*sin(2*time_scale);
-	green=50+50*sin(3*time_scale);
-	time_scale+=0.0015;
-	
-	WS2812_Ctrl(red , green , blue);
-	if(time_scale>=1000)time_scale=1;
 }

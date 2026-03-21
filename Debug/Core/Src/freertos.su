@@ -1,0 +1,6 @@
+../Core/Src/freertos.c:80:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:93:6:vApplicationGetTimerTaskMemory	24	static
+../Core/Src/freertos.c:107:6:MX_FREERTOS_Init	104	static
+../Core/Src/freertos.c:154:6:StartDefaultTask	16	static
+../Core/Src/freertos.c:174:13:Imu_Task_Entry	16	static
+../Core/Src/freertos.c:192:13:Boat_Task_Entry	16	static
